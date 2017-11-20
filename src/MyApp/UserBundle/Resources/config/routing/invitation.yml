@@ -1,0 +1,24 @@
+invitation_index:
+    path:     /
+    defaults: { _controller: "MyAppUserBundle:Invitation:index" }
+    methods:  GET
+
+invitation_show:
+    path:     /{code}/show
+    defaults: { _controller: "MyAppUserBundle:Invitation:show" }
+    methods:  GET
+
+invitation_new:
+    path:     /new
+    defaults: { _controller: "MyAppUserBundle:Invitation:new" }
+    methods:  [GET, POST]
+
+invitation_edit:
+    path:     /{code}/edit
+    defaults: { _controller: "MyAppUserBundle:Invitation:edit" }
+    methods:  [GET, POST]
+
+invitation_delete:
+    path:     /{code}/delete
+    defaults: { _controller: "MyAppUserBundle:Invitation:delete" }
+    methods:  DELETE

@@ -1,0 +1,40 @@
+{% extends 'MyAppUserBundle:Default:base.html.twig' %}
+
+{% block body %}
+    <h1>Cartefidelite</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ carteFidelite.id }}</td>
+            </tr>
+            <tr>
+                <th>Datecreationcarte</th>
+                <td>{{ carteFidelite.dateCreationCarte }}</td>
+            </tr>
+            <tr>
+                <th>Soldecarte</th>
+                <td>{{ carteFidelite.soldeCarte }}</td>
+            </tr>
+            <tr>
+                <th>Evaluationcarte</th>
+                <td>{{ carteFidelite.evaluationCarte }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cartefidelites_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('cartefidelites_edit', { 'id': carteFidelite.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

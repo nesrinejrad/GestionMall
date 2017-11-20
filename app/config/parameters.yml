@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: tunisiamall1.1
+    database_user: root
+    database_password: null
+    mailer_transport: gmail
+    mailer_host: smtp.gmail.com
+    mailer_user: esprit.tunisiamal@gmail.com
+    mailer_password: 123456wxcv
+    secret: ThisTokenIsNotSoSecretChangeIt

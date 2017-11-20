@@ -1,0 +1,34 @@
+
+                    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Proprietaire</th>
+                <th>Datecreationcarte</th>
+                <th>Soldecarte</th>
+                <th>Evaluationcarte</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for carteFidelite in carteFidelites %}
+            <tr>
+                <td><a href="{{ path('cartefidelites_show', { 'id': carteFidelite.id }) }}">{{ carteFidelite.code }}</a></td>
+                <th>{{ carteFidelite.client.prenom }} {{ carteFidelite.client.nom }}</th>
+                <td>{{ carteFidelite.dateCreationCarte }}</td>
+                <td>{{ carteFidelite.soldeCarte }}</td>
+                <td>{{ carteFidelite.evaluationCarte }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cartefidelites_show', { 'id': carteFidelite.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('cartefidelites_edit', { 'id': carteFidelite.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>

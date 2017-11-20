@@ -1,0 +1,18 @@
+my_app_boutique_client:
+    resource: "@MyAppBoutiqueClientBundle/Resources/config/routing.yml"
+    prefix:   /
+
+my_app_user:
+    resource: "@MyAppUserBundle/Resources/config/routing.yml"
+    prefix:   /monespace/
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+general:
+    path:     /acceuil
+    defaults: { _controller: MyAppUserBundle:Security:login }

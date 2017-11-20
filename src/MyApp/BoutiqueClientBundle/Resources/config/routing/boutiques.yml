@@ -1,0 +1,32 @@
+boutiques_client_index:
+    path:     /
+    defaults: { _controller: "MyAppBoutiqueClientBundle:Boutiques:index" }
+    methods:  GET
+
+boutiques_client_show:
+    path:     /{id}/show
+    defaults: { _controller: "MyAppBoutiqueClientBundle:Boutiques:show" }
+    methods:  GET
+
+boutiques_client_new:
+    path:     /new
+    defaults: { _controller: "MyAppBoutiqueClientBundle:Boutiques:new" }
+    methods:  [GET, POST]
+
+boutiques_client_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MyAppBoutiqueClientBundle:Boutiques:edit" }
+    methods:  [GET, POST]
+
+boutiques_client_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MyAppBoutiqueClientBundle:Boutiques:delete" }
+    methods:  DELETE
+    
+boutiques_client_sabonner:
+    path:     /{id}/sabonnerboutique
+    defaults: { _controller: "MyAppBoutiqueClientBundle:Boutiques:sabonnerBoutique" }
+    
+boutiques_client_sabonnerdesabonner:
+    path:     /{id}/sabonnerdesabonner
+    defaults: { _controller: "MyAppBoutiqueClientBundle:Boutiques:sabonnerdesabonner" }

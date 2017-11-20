@@ -1,0 +1,108 @@
+{% extends 'MyAppUserBundle:Default:base.html.twig' %}
+
+
+{% block body -%}
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Page Header
+                <small>Optional description</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+                <li class="active">Here</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <!-- Your Page Content Here -->
+            <div class="box box-primary">
+                <div class="box-header ui-sortable-handle" style="cursor: move;">
+                    <i class="ion ion-clipboard"></i>
+
+                    <h3 class="box-title">Demande</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    {% for flash_message in app.session.flashBag.get('annulee') %}
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h4><i class="icon fa fa-ban"></i> Annulation d'une demande de demande!</h4>
+                            {{ flash_message }}
+                        </div>
+                    {% endfor %}
+                    {% for flash_message in app.session.flashBag.get('acceptee') %}
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h4><i class="icon fa fa-check"></i> Acceptation d'une demande de demande!</h4>
+                            {{ flash_message }}
+                        </div>
+                    {% endfor %}
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nom</th>
+                                <th>Prenom</th>
+                                <th>Email</th>
+                                <th>Telephone</th>
+                                <th>Progression</th>
+                                <th>Statut</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for entity in entities %}
+                                <tr>
+                                    <td><a href="{{ path('demande_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                                    <td>{{ entity.nom }}</td>
+                                    <td>{{ entity.prenom }}</td>
+                                    <td>{{ entity.email }}</td>
+                                    <td>{{ entity.telephone }}</td>
+                                    <td>
+                                        {% if entity.etat == 0 %}
+                                            <span class="pull-left badge bg-blue">Nouvelle demande</span>
+                                        {% endif %}
+                                        {% if entity.etat == 1 %}
+                                            <span class="pull-left badge bg-green">Demande confirmée</span>
+                                        {% endif %}
+                                        {% if entity.etat == 2 %}
+                                            <span class="pull-left badge bg-red">Demande annumée</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <div class="progress progress-xs">
+                                            {% if entity.etat == 0 %}
+                                                <div class="progress-bar progress-bar-primary" style="width: 50%" </div>
+                                            {% endif %}
+                                            {% if entity.etat == 2 %}
+                                                <div class="progress-bar progress-bar-danger" style="width: 100%" </div>
+                                            {% endif %}
+                                            {% if entity.etat == 1 %}
+                                                <div class="progress-bar progress-bar-success" style="width: 100%" </div>
+                                            {% endif %}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary btn-sm pull-right" href="{{ path('demande_show', { 'id': entity.id }) }}">Afficher</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer clearfix no-border">
+
+                    <a class="btn btn-default pull-right" href="{{ path('demande_new') }}">
+                        Ajouter une demande
+                    </a>
+                </div>
+            </div>
+            <!-- Your Page Content Here -->
+
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+{% endblock %}

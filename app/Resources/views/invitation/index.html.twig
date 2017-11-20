@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Invitations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Email</th>
+                <th>Sent</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for invitation in invitations %}
+            <tr>
+                <td><a href="{{ path('invitation_show', { 'code': invitation.code }) }}">{{ invitation.code }}</a></td>
+                <td>{{ invitation.email }}</td>
+                <td>{% if invitation.sent %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('invitation_show', { 'code': invitation.code }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('invitation_edit', { 'code': invitation.code }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('invitation_new') }}">Create a new invitation</a>
+        </li>
+    </ul>
+{% endblock %}

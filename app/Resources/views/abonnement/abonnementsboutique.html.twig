@@ -1,0 +1,55 @@
+{% extends 'MyAppUserBundle:Default:base.html.twig' %}
+
+
+{% block body -%}
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Page Header
+                <small>Optional description</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+                <li class="active">Here</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <!-- Your Page Content Here -->
+            <div class="box box-primary">
+                <div class="box-header ui-sortable-handle" style="cursor: move;">
+                    <i class="ion ion-clipboard"></i>
+
+                    <h3 class="box-title">Boutiques</h3>
+                    <a class="btn btn-default pull-right" href="{{ path('boutiques_new') }}">
+                        Ajouter une boutique
+                    </a>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Abonnée</th>
+                <th>Date d'abonnement</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for abonnement in abonnements %}
+            <tr>
+                <td>{{ abonnement.client.prenom }} {{ abonnement.client.nom }}</td>
+                <td>{{ abonnement.dateAbonnement }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+            </div>
+            <!-- Your Page Content Here -->
+
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+{% endblock %}

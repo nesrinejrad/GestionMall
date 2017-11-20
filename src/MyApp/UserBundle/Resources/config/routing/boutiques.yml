@@ -1,0 +1,34 @@
+boutiques_index:
+    path:     /
+    defaults: { _controller: "MyAppUserBundle:Boutiques:index" }
+    methods:  GET
+
+boutiques_show:
+    path:     /{id}/show
+    defaults: { _controller: "MyAppUserBundle:Boutiques:show" }
+    methods:  GET
+
+boutiques_new:
+    path:     /new
+    defaults: { _controller: "MyAppUserBundle:Boutiques:new" }
+    methods:  [GET, POST]
+
+boutiques_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MyAppUserBundle:Boutiques:edit" }
+    methods:  [GET, POST]
+
+boutiques_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MyAppUserBundle:Boutiques:delete" }
+    methods:  DELETE
+    
+boutiques_showmaboutique:
+    path:     /showmaboutique
+    defaults: { _controller: "MyAppUserBundle:Boutiques:showMaBoutique" }
+    methods:  GET
+
+boutiques_edit_maboutique:
+    path:     /maboutique/editer
+    defaults: { _controller: "MyAppUserBundle:Boutiques:editMaBoutique" }
+    methods:  [GET, POST]

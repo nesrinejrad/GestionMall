@@ -1,0 +1,4 @@
+my_app_boutique_client_boutiques:
+    resource: "@MyAppBoutiqueClientBundle/Resources/config/routing/boutiques.yml"
+    prefix:   /boutiques
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>ARSINNOV</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <link rel="stylesheet" href="{{ asset('assets/registercss.css') }}" />
+    </head>
+    <body>
+        <div class="container">
+
+            <header>
+                <h1>Fiche d'inscription</h1>
+
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            {% block body %}
+
+                            {%  endblock body %}
+                            <a href="#" onclick="switcher(3);" class="to_register">Client</a>
+                            <p class="change_link">
+                                <b>Demander une invitation</b>
+                                <a href="#" onclick="switcher(1);" class="to_register">Demander code</a>
+                            </p>
+                        </div>
+                        <div id="client" class="animate form">
+                            {{ render(controller( 'MyAppUserBundle:RegistrationClient:register')) }}
+                            <a href="#" onclick="switcher(2);" class="to_register">Responsable</a>
+                            <p class="change_link">
+                                <b>J'ai déjà un code</b>
+                                <a href="#" onclick="switcher(2);" class="to_register">Inscription</a>
+                            </p>
+                        </div>
+                        <div id="register" class="animate form">
+                            {{ render(controller( 'MyAppUserBundle:Demande:new')) }}
+                            <p class="change_link">
+                                <b>J'ai déjà un code</b>
+                                <a href="#" onclick="switcher(2);" class="to_register">Inscription</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+        </div>
+                        <script src="{{ asset('js/jquery-2.1.4.min.js') }}"></script>
+    <!-- Bootstrap 3.3.4 -->
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script>
+        function switcher(id) {
+            if(id == 1){
+            $("#register").css('opacity',1);//responsable
+            $("#register").css('z-index',1000);
+            $("#login").css('opacity',0);//demande
+            $("#login").css('z-index',0);
+            $("#client").css('opacity',0);//client
+            $("#client").css('z-index',0);
+        }else if(id == 2){
+            $("#register").css('opacity',0);
+            $("#register").css('z-index',0);
+            $("#login").css('opacity',1);
+            $("#login").css('z-index',1000);
+            $("#client").css('opacity',0);//client
+            $("#client").css('z-index',0);
+        }else{
+            $("#register").css('opacity',0);
+            $("#register").css('z-index',0);
+            $("#login").css('opacity',0);
+            $("#login").css('z-index',0);
+            $("#client").css('opacity',1);//client
+            $("#client").css('z-index',1000);
+        }
+    }
+    </script>
+    </body>
+</html>

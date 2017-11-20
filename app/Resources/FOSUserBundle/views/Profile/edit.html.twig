@@ -1,0 +1,9 @@
+{#{% extends "FOSUserBundle::layout.html.twig" %}#}
+{% extends '::base.html.twig' %}
+{% form_theme form '::include/Form/fields.html.twig' %}
+
+{% block body %}
+{% block fos_user_content %}
+{% include "FOSUserBundle:Profile:edit_content.html.twig" %}
+{% endblock fos_user_content %}
+{% endblock body %}

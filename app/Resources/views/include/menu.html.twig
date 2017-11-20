@@ -1,0 +1,121 @@
+<ul class="sidebar-menu">
+            <li class="header">Gestion Boutique</li>
+            <!-- Optionally, you can add icons to the links -->
+            {#<li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+            <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>#}
+            
+            
+            {% if is_granted('ROLE_ADMIN') %}
+            <li class="treeview">
+              <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Boutiques</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="{{ path('boutiques_index') }}">liste des boutiques</a></li>
+                <li><a href="{{ path('boutiques_new') }}">Ajouter une boutique</a></li>
+              </ul>
+            </li>
+            
+            <li class="treeview">
+              <a href="{{ path('responsable_index') }}"><i class="fa fa-link"></i> <span>Responsables Boutique</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="{{ path('responsable_index') }}">liste des responsables</a></li>
+                <li><a href="{{ path('responsable_new') }}">Ajouter un responsable</a></li>
+              </ul>
+            </li>
+            
+            <li class="treeview">
+              <a href="{{ path('demande_index') }}"><i class="fa fa-link"></i> <span>Demandes Boutiques</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="{{ path('demande_index') }}">liste des demandes</a></li>
+                <li><a href="{{ path('demande_new') }}">Ajouter une demande</a></li>
+              </ul>
+            </li>
+                <li class="treeview">
+                    <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Produit</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('boutiques_index') }}">Chaussure</a></li>
+                        <li><a href="{{ path('boutiques_new') }}">Accecoire</a></li>
+                        <li><a href="{{ path('boutiques_new') }}">Vetement</a></li>
+                        <li><a href="{{ path('boutiques_new') }}">Afficher tous</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Utilisateur</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('boutiques_index') }}">Afficher</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Mail</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('boutiques_index') }}">Nouveau Mail</a></li>
+                        <li><a href="{{ path('boutiques_new') }}">Boite de reception</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Publicité</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('boutiques_index') }}">Ajouter</a></li>
+                        <li><a href="{{ path('boutiques_new') }}">Modifier</a></li>
+                        <li><a href="{{ path('boutiques_new') }}">Supprimer</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Livraison</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('boutiques_index') }}">Afficher</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Statistique</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ path('boutiques_index') }}">Afficher</a></li>
+
+                    </ul>
+                </li>
+
+            {% endif %}
+            
+            {% if is_granted('ROLE_RESPONSABLE') and not is_granted('ROLE_ADMIN') %}
+            <li class="treeview">
+              <a><i class="fa fa-link"></i> <span>Ma Boutique</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="{{ path('boutiques_showmaboutique') }}">Afficher ma boutique</a></li>
+                <li><a href="{{ path('boutiques_edit_maboutique') }}">Editer Ma boutique</a></li>
+              </ul>
+            </li>
+            
+            <li class="">
+                <a href="{{ path('cartefidelites_cartesmaboutique') }}"><i class="fa fa-link"></i> <span>Cartes Fidelites</span></a>
+            </li>
+            
+            <li class="">
+                <a href="{{ path('abonnement_abonnementsmaboutique') }}"><i class="fa fa-link"></i> <span>Abonnées</span></a>
+            </li>
+            
+            {% endif %}
+
+
+            
+            <li class="treeview">
+              <a href="{ { path('invitation') }}"><i class="fa fa-link"></i> <span>Invitation</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="{ { path('invitation') }}">liste des dossiers</a></li>
+                <li><a href="{ { path('invitation_new') }}">Ajouter un dossier</a></li>
+              </ul>
+            </li>
+            
+            {#settings#}
+            {% if is_granted('ROLE_ADMIN') %}
+            <li class="header">Paramètres</li>
+            <li class="treeview">
+              <a href="{{ path('categorie_index') }}"><i class="fa fa-link"></i> <span>Categories</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                  <li><a href="{{ path('categorie_index') }}">Liste Categories</a></li>
+                <li><a href="{{ path('categorie_new') }}">Ajouter une categorie</a></li>
+              </ul>
+            </li>
+            {% endif %}
+          </ul>

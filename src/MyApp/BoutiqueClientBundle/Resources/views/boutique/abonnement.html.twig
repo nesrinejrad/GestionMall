@@ -1,0 +1,9 @@
+{% if abonnement is not empty %}
+        <fieldset>
+            <a href="{{ path('boutiques_client_sabonnerdesabonner',{}) }}" name="" value="" class="button">Se désabonner</a>
+        </fieldset>
+{% else %}
+        <fieldset>
+            <a href="{{ path('boutiques_client_sabonnerdesabonner') }}" name="" value="" class="button">S'abonner</a>
+        </fieldset>
+{% endif %}

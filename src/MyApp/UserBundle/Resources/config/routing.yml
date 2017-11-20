@@ -1,0 +1,68 @@
+sign_up:
+          path:     /sinscrie
+          defaults: { _controller: MyAppUserBundle:Default:register }
+admin:
+    path:     /acceuil
+    defaults: { _controller: MyAppUserBundle:Security:login }
+acceuilClient:
+    path:     /acceuilClient
+    defaults: { _controller: MyAppUserBundle:Default:connecter }
+ajoutForm:
+    path:     /ajoutForm
+    defaults: { _controller: MyAppUserBundle:Registration:register }
+ajout:
+    path:     /essai
+    defaults: { _controller: MyAppUserBundle:Default:essaie }
+admin1:
+    path:     /acceuil
+    defaults: { _controller: MyAppUserBundle:Security:login }
+Client:
+    path:     /acceuil
+    defaults: { _controller: MyAppUserBundle:Security:login }
+responsable:
+    path:     /acceuil
+    defaults: { _controller: MyAppUserBundle:Security:login }
+
+responsable_sendmail:
+    path:     /sendmail
+    defaults: { _controller: MyAppUserBundle:Default:sendmail }
+    
+my_app_user_demande:
+        resource: "@MyAppUserBundle/Resources/config/routing/demande.yml"
+        prefix:   /demande
+        
+client_inscription:
+    path:     /inscription/client
+    defaults: { _controller: MyAppUserBundle:RegistrationClient:register }
+    
+my_app_user_boutiques:
+        resource: "@MyAppUserBundle/Resources/config/routing/boutiques.yml"
+        prefix:   /boutiques
+        
+my_app_user_categorie:
+        resource: "@MyAppUserBundle/Resources/config/routing/categorie.yml"
+        prefix:   /categorie
+        
+my_app_user_user:
+        resource: "@MyAppUserBundle/Resources/config/routing/user.yml"
+        prefix:   /user
+        
+my_app_responsable_user:
+        resource: "@MyAppUserBundle/Resources/config/routing/responsable.yml"
+        prefix:   /responsable
+        
+my_app_user_cartefidelites:
+        resource: "@MyAppUserBundle/Resources/config/routing/cartefidelites.yml"
+        prefix:   /cartefidelites
+        
+my_app_user_abonnement:
+        resource: "@MyAppUserBundle/Resources/config/routing/abonnement.yml"
+        prefix:   /abonnement
+        
+my_app_user_invitation:
+        resource: "@MyAppUserBundle/Resources/config/routing/invitation.yml"
+        prefix:   /invitation
+
+index_monespace:
+    path:     /monespace
+    defaults: { _controller: MyAppUserBundle:monespace:index }

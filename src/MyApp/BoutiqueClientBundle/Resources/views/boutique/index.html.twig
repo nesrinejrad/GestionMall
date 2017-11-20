@@ -1,0 +1,73 @@
+{% extends 'baseclient.html.twig' %}
+
+{% block body %}
+    <div class="page-head_agile_info_w3l">
+        <div class="container">
+            <h3>Single <span>Page </span></h3>
+            <!--/w3_short-->
+            <div class="services-breadcrumb">
+                <div class="agile_inner_breadcrumb">
+
+                    <ul class="w3_short">
+                        <li><a href="">Home</a><i>|</i></li>
+                        <li>Single Page</li>
+                    </ul>
+                </div>
+            </div>
+            <!--//w3_short-->
+        </div>
+    </div>
+
+
+    <h1>Boutiques list</h1>
+    <div class="banner-bootom-w3-agileits">
+        {% for boutique in boutiques %}
+            <div class="col-md-3 product-men single">
+                <div class="men-pro-item simpleCart_shelfItem">
+                    <div class="men-thumb-item">
+                        <img src="images/w2.jpg" alt="" class="pro-image-front">
+                        <img src="images/w2.jpg" alt="" class="pro-image-back">
+                        <div class="men-cart-pro">
+                            <div class="inner-men-cart-pro">
+                                <a href="single.html" class="link-product-add-cart">Quick View</a>
+                            </div>
+                        </div>
+                        <span class="product-new-top">New</span>
+
+                    </div>
+                    <div class="item-info-product ">
+                        <h4><a href="single.html">{{ boutique.nomBoutique }}</a></h4>
+                        <div class="info-product-price">
+                            <span class="item_price">{{ boutique.categorie }}</span>
+                        </div>
+                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                            {% set found = 0 %}
+                            {% for item in boutique.abonnees %}
+                                {% if app.user.id == item.client.id %}
+                                    {% set found = 1 %}
+                                    <form action="{{ path('boutiques_client_sabonnerdesabonner',{id: boutique.id}) }}" method="GET">
+                                    <fieldset>
+                                        <input type="submit" name="abonnement" value="Se désabonner" class="button" />
+                                    </fieldset>
+                                    </form>
+                                {% endif %}
+                            {% endfor %}
+                            {% if found == 0%}
+                                <form action="{{ path('boutiques_client_sabonnerdesabonner',{id: boutique.id}) }}" method="GET">
+                                <fieldset>
+                                    <input type="submit" name="abonnement" value="S'abonner" class="button"/>
+                                </fieldset>
+                                </form>
+                            {% endif %}
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                </div>
+
+                <div class="clearfix"></div>
+                <br><br>
+                {% endblock %}

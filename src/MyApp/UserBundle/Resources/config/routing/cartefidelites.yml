@@ -1,0 +1,35 @@
+cartefidelites_index:
+    path:     /
+    defaults: { _controller: "MyAppUserBundle:carteFidelites:index" }
+    methods:  GET
+
+cartefidelites_show:
+    path:     /{id}/show
+    defaults: { _controller: "MyAppUserBundle:carteFidelites:show" }
+    methods:  GET
+
+cartefidelites_new:
+    path:     /new
+    defaults: { _controller: "MyAppUserBundle:carteFidelites:new" }
+    methods:  [GET, POST]
+
+cartefidelites_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MyAppUserBundle:carteFidelites:edit" }
+    methods:  [GET, POST]
+
+cartefidelites_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MyAppUserBundle:carteFidelites:delete" }
+    methods:  DELETE
+    
+cartefidelites_cartesmaboutique:
+    path:     /cartesmaboutique
+    defaults: { _controller: "MyAppUserBundle:carteFidelites:cartesMaBoutique" }
+    methods:  GET
+    
+cartefidelites_cartesmaboutique_sans_style:
+    path:     /{id}/cartesmaboutiquesansstyle
+    defaults: { _controller: "MyAppUserBundle:carteFidelites:cartesMaBoutiqueSansStyle" }
+    methods:  GET
+    

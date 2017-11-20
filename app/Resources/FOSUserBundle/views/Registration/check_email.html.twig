@@ -1,0 +1,26 @@
+{#{% extends "FOSUserBundle::layout.html.twig" %}#}
+{% extends '::base.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block body %}
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            Verification de l'email
+            <small>conultez votre boite email</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> GRH</a></li>
+            <li class="active">verification par email</li>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+{% block fos_user_content %}
+    <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
+{% endblock fos_user_content %}
+</section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+{% endblock body %}

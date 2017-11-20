@@ -1,0 +1,12 @@
+{#{% extends "FOSUserBundle::layout.html.twig" %}#}
+{% extends '::base.html.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('assets/dist/css/profile1.css')}}">
+{% endblock css %}
+
+{% block body %}
+{% block fos_user_content %}
+{% include "FOSUserBundle:Profile:show_content.html.twig" %}
+{% endblock fos_user_content %}
+{% endblock body %}

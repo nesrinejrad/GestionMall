@@ -1,0 +1,16 @@
+<table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Abonnée</th>
+                <th>Date d'abonnement</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for abonnement in abonnements %}
+            <tr>
+                <td>{{ abonnement.client.prenom }} {{ abonnement.client.nom }}</td>
+                <td>{{ abonnement.dateAbonnement }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>

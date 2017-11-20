@@ -1,0 +1,38 @@
+demande:
+    path:     /
+    defaults: { _controller: "MyAppUserBundle:Demande:index" }
+
+demande_show:
+    path:     /{id}/show
+    defaults: { _controller: "MyAppUserBundle:Demande:show" }
+
+demande_new:
+    path:     /new
+    defaults: { _controller: "MyAppUserBundle:Demande:new" }
+
+demande_create:
+    path:     /create
+    defaults: { _controller: "MyAppUserBundle:Demande:create" }
+    methods:  POST
+
+demande_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MyAppUserBundle:Demande:edit" }
+
+demande_update:
+    path:     /{id}/update
+    defaults: { _controller: "MyAppUserBundle:Demande:update" }
+    methods:  [POST, PUT]
+
+demande_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MyAppUserBundle:Demande:delete" }
+    methods:  [POST, DELETE]
+    
+demande_annuler:
+    path:     /{id}/annuler
+    defaults: { _controller: "MyAppUserBundle:Demande:annuler" }
+    
+demande_accepter:
+    path:     /{id}/accepter
+    defaults: { _controller: "MyAppUserBundle:Demande:accepter" }

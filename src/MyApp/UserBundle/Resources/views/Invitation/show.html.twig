@@ -1,0 +1,36 @@
+{% extends 'MyAppUserBundle:Default:base.html.twig' %}
+
+{% block body -%}
+    <h1>Invitation</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Code</th>
+                <td>{{ entity.code }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Sent</th>
+                <td>{{ entity.sent }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('invitation') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('invitation_edit', { 'id': entity.code }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

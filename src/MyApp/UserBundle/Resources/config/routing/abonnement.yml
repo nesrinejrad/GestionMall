@@ -1,0 +1,34 @@
+abonnement_index:
+    path:     /
+    defaults: { _controller: "MyAppUserBundle:abonnement:index" }
+    methods:  GET
+
+abonnement_show:
+    path:     /{id}/show
+    defaults: { _controller: "MyAppUserBundle:abonnement:show" }
+    methods:  GET
+
+abonnement_new:
+    path:     /new
+    defaults: { _controller: "MyAppUserBundle:abonnement:new" }
+    methods:  [GET, POST]
+
+abonnement_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MyAppUserBundle:abonnement:edit" }
+    methods:  [GET, POST]
+
+abonnement_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MyAppUserBundle:abonnement:delete" }
+    methods:  DELETE
+    
+abonnement_abonnementsmaboutique:
+    path:     /abonnementsmaboutique
+    defaults: { _controller: "MyAppUserBundle:abonnement:abonneesMaBoutique" }
+    methods:  GET
+    
+abonnement_abonnementsmaboutique_sans_style:
+    path:     /{id}/abonnementsmaboutiquesansstyle
+    defaults: { _controller: "MyAppUserBundle:abonnement:abonnementsMaBoutiqueSansStyle" }
+    methods:  GET
