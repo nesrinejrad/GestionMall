@@ -35,12 +35,17 @@ class SecurityController extends Controller
             return $this->render('@MyAppUser/Default/base.html.twig');
 
         }
+        if ($authChecker->isGranted('ROLE_CLIENT')) {
+            //    return new RedirectResponse($router->generate('acceuilClient'), 307);
+            return $this->render('@MyAppUser/Default/homePage.html.twig');
+
+        }
 
 
 
         if ($authChecker->isGranted('ROLE_AGENT')) {
             // return new RedirectResponse($router->generate('acceuilClient'), 307);
-            return $this->render('MyAppUserBundle:Default:responsable.html.twig');
+            return $this->render('@MyAppUser/Default/base.html.twig');
         }
         /** @var $session Session */
         $session = $request->getSession();

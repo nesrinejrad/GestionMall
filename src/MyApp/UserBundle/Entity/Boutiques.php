@@ -91,7 +91,7 @@ class Boutiques
      */
     public function getCategorieBoutique()
     {
-        return $this->categorieBoutique;
+        return $this->categorie;
     }
 
     /**
@@ -143,6 +143,10 @@ class Boutiques
     }
     
     public function __toString() {
+        return $this->nomBoutique;
+    }
+
+    public function getNom() {
         return $this->nomBoutique;
     }
 

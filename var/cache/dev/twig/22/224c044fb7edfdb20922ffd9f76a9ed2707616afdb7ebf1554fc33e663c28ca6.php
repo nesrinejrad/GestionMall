@@ -18,11 +18,11 @@ class __TwigTemplate_ea47cca0637c6098b7615d28968d90348e138c53f2b21bb45bc67690753
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8a0d9319f8a382f26516e93824a2dd6be58bbb1d69798d9bdae961defe912bad = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_8a0d9319f8a382f26516e93824a2dd6be58bbb1d69798d9bdae961defe912bad->enter($__internal_8a0d9319f8a382f26516e93824a2dd6be58bbb1d69798d9bdae961defe912bad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@MyAppUser/Default/base.html.twig"));
+        $__internal_1045f174a27e15fc07497788932380d6948ef91c2c8d6d19a22e41fae53e359e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_1045f174a27e15fc07497788932380d6948ef91c2c8d6d19a22e41fae53e359e->enter($__internal_1045f174a27e15fc07497788932380d6948ef91c2c8d6d19a22e41fae53e359e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@MyAppUser/Default/base.html.twig"));
 
-        $__internal_5530e70f859ebab913c46393bdcbd9418fd7bb4899289210a895edfa6bf42952 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5530e70f859ebab913c46393bdcbd9418fd7bb4899289210a895edfa6bf42952->enter($__internal_5530e70f859ebab913c46393bdcbd9418fd7bb4899289210a895edfa6bf42952_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@MyAppUser/Default/base.html.twig"));
+        $__internal_f65efe43a8d8e56939d244eac027ac8b1b57c77a58ea63199e039e67ef504e90 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f65efe43a8d8e56939d244eac027ac8b1b57c77a58ea63199e039e67ef504e90->enter($__internal_f65efe43a8d8e56939d244eac027ac8b1b57c77a58ea63199e039e67ef504e90_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@MyAppUser/Default/base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -335,188 +335,108 @@ scratch. This page gets rid of all links and provides the needed markup only.
         // line 246
         echo "
       <!-- Main Footer -->
-      <footer class=\"main-footer\">
-        <!-- To the right -->
-        <div class=\"pull-right hidden-xs\">
-          Anything you want
-        </div>
-        <!-- Default to the left -->
-        <strong>Copyright &copy; 2015 <a href=\"#\">Company</a>.</strong> All rights reserved.
-      </footer>
 
-      <!-- Control Sidebar -->
-      <aside class=\"control-sidebar control-sidebar-dark\">
-        <!-- Create the tabs -->
-        <ul class=\"nav nav-tabs nav-justified control-sidebar-tabs\">
-          <li class=\"active\"><a href=\"#control-sidebar-home-tab\" data-toggle=\"tab\"><i class=\"fa fa-home\"></i></a></li>
-          <li><a href=\"#control-sidebar-settings-tab\" data-toggle=\"tab\"><i class=\"fa fa-gears\"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class=\"tab-content\">
-          <!-- Home tab content -->
-          <div class=\"tab-pane active\" id=\"control-sidebar-home-tab\">
-            <h3 class=\"control-sidebar-heading\">Recent Activity</h3>
-            <ul class=\"control-sidebar-menu\">
-              <li>
-                <a href=\"javascript::;\">
-                  <i class=\"menu-icon fa fa-birthday-cake bg-red\"></i>
-                  <div class=\"menu-info\">
-                    <h4 class=\"control-sidebar-subheading\">Langdon's Birthday</h4>
-                    <p>Will be 23 on April 24th</p>
-                  </div>
-                </a>
-              </li>
-            </ul><!-- /.control-sidebar-menu -->
-
-            <h3 class=\"control-sidebar-heading\">Tasks Progress</h3>
-            <ul class=\"control-sidebar-menu\">
-              <li>
-                <a href=\"javascript::;\">
-                  <h4 class=\"control-sidebar-subheading\">
-                    Custom Template Design
-                    <span class=\"label label-danger pull-right\">70%</span>
-                  </h4>
-                  <div class=\"progress progress-xxs\">
-                    <div class=\"progress-bar progress-bar-danger\" style=\"width: 70%\"></div>
-                  </div>
-                </a>
-              </li>
-            </ul><!-- /.control-sidebar-menu -->
-
-          </div><!-- /.tab-pane -->
-          <!-- Stats tab content -->
-          <div class=\"tab-pane\" id=\"control-sidebar-stats-tab\">Stats Tab Content</div><!-- /.tab-pane -->
-          <!-- Settings tab content -->
-          <div class=\"tab-pane\" id=\"control-sidebar-settings-tab\">
-            <form method=\"post\">
-              <h3 class=\"control-sidebar-heading\">General Settings</h3>
-              <div class=\"form-group\">
-                <label class=\"control-sidebar-subheading\">
-                  Report panel usage
-                  <input type=\"checkbox\" class=\"pull-right\" checked>
-                </label>
-                <p>
-                  Some information about this general settings option
-                </p>
-              </div><!-- /.form-group -->
-            </form>
-          </div><!-- /.tab-pane -->
-        </div>
-      </aside><!-- /.control-sidebar -->
-      <!-- Add the sidebar's background. This div must be placed
-           immediately after the control sidebar -->
-      <div class=\"control-sidebar-bg\"></div>
-    </div><!-- ./wrapper -->
 
     <!-- REQUIRED JS SCRIPTS -->
     <script type=\"text/javascript\" src=\"";
-        // line 322
+        // line 251
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/plugins/jQuery/jQuery-2.1.4.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 323
+        // line 252
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 324
+        // line 253
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/dist/js/app.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 325
+        // line 254
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/plugins/select2/select2.full.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 326
+        // line 255
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/plugins/datatables/jquery.dataTables.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 327
+        // line 256
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/plugins/datatables/dataTables.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 328
+        // line 257
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/plugins/formvalidation/jquery.validate.js"), "html", null, true);
         echo "\"></script>
-    <script>
-    \$(function () {
-        \$(\".select2\").select2();
-        \$('table').DataTable( {
-        \"language\": {
-            \"url\": \"http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json\"
-        }
-    } );
-    });
-    </script>
+
     ";
-        // line 339
+        // line 259
         $this->displayBlock('javascript', $context, $blocks);
-        // line 341
+        // line 261
         echo "  </body>
 </html>";
         
-        $__internal_8a0d9319f8a382f26516e93824a2dd6be58bbb1d69798d9bdae961defe912bad->leave($__internal_8a0d9319f8a382f26516e93824a2dd6be58bbb1d69798d9bdae961defe912bad_prof);
+        $__internal_1045f174a27e15fc07497788932380d6948ef91c2c8d6d19a22e41fae53e359e->leave($__internal_1045f174a27e15fc07497788932380d6948ef91c2c8d6d19a22e41fae53e359e_prof);
 
         
-        $__internal_5530e70f859ebab913c46393bdcbd9418fd7bb4899289210a895edfa6bf42952->leave($__internal_5530e70f859ebab913c46393bdcbd9418fd7bb4899289210a895edfa6bf42952_prof);
+        $__internal_f65efe43a8d8e56939d244eac027ac8b1b57c77a58ea63199e039e67ef504e90->leave($__internal_f65efe43a8d8e56939d244eac027ac8b1b57c77a58ea63199e039e67ef504e90_prof);
 
     }
 
     // line 32
     public function block_css($context, array $blocks = array())
     {
-        $__internal_fd0fa8c3b716498c74423d3ac5f68576503da65d67ff4d70051029875a71e97e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_fd0fa8c3b716498c74423d3ac5f68576503da65d67ff4d70051029875a71e97e->enter($__internal_fd0fa8c3b716498c74423d3ac5f68576503da65d67ff4d70051029875a71e97e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "css"));
+        $__internal_f3cb5c3934e1b65d40a8013c8eeb3336dcd71c4532681ce26003f4960a6cf6cf = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_f3cb5c3934e1b65d40a8013c8eeb3336dcd71c4532681ce26003f4960a6cf6cf->enter($__internal_f3cb5c3934e1b65d40a8013c8eeb3336dcd71c4532681ce26003f4960a6cf6cf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "css"));
 
-        $__internal_c38e3ec1c9f603b9d46a8545354372bc5c4619437226134b5af36d3d63b67c76 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c38e3ec1c9f603b9d46a8545354372bc5c4619437226134b5af36d3d63b67c76->enter($__internal_c38e3ec1c9f603b9d46a8545354372bc5c4619437226134b5af36d3d63b67c76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "css"));
+        $__internal_491e79dc648826e9db12b84b497e48df8b95836dd7e6303013ff1cc3073eb25a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_491e79dc648826e9db12b84b497e48df8b95836dd7e6303013ff1cc3073eb25a->enter($__internal_491e79dc648826e9db12b84b497e48df8b95836dd7e6303013ff1cc3073eb25a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "css"));
 
         // line 33
         echo "        
         ";
         
-        $__internal_c38e3ec1c9f603b9d46a8545354372bc5c4619437226134b5af36d3d63b67c76->leave($__internal_c38e3ec1c9f603b9d46a8545354372bc5c4619437226134b5af36d3d63b67c76_prof);
+        $__internal_491e79dc648826e9db12b84b497e48df8b95836dd7e6303013ff1cc3073eb25a->leave($__internal_491e79dc648826e9db12b84b497e48df8b95836dd7e6303013ff1cc3073eb25a_prof);
 
         
-        $__internal_fd0fa8c3b716498c74423d3ac5f68576503da65d67ff4d70051029875a71e97e->leave($__internal_fd0fa8c3b716498c74423d3ac5f68576503da65d67ff4d70051029875a71e97e_prof);
+        $__internal_f3cb5c3934e1b65d40a8013c8eeb3336dcd71c4532681ce26003f4960a6cf6cf->leave($__internal_f3cb5c3934e1b65d40a8013c8eeb3336dcd71c4532681ce26003f4960a6cf6cf_prof);
 
     }
 
     // line 243
     public function block_body($context, array $blocks = array())
     {
-        $__internal_812ec2fbaa00e946c7c8abc0147ea64cf73c4276959cddc08c190b17fede683f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_812ec2fbaa00e946c7c8abc0147ea64cf73c4276959cddc08c190b17fede683f->enter($__internal_812ec2fbaa00e946c7c8abc0147ea64cf73c4276959cddc08c190b17fede683f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6ebaa66e1c6f39c86c4c3dc0633d9ca2fcb35e2c23c49b7d760ec4ef24aba3e0 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_6ebaa66e1c6f39c86c4c3dc0633d9ca2fcb35e2c23c49b7d760ec4ef24aba3e0->enter($__internal_6ebaa66e1c6f39c86c4c3dc0633d9ca2fcb35e2c23c49b7d760ec4ef24aba3e0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_a8ade119c6da80818cc142428ba62f1f44a23b7494babcca3bc84ac3908f75fb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a8ade119c6da80818cc142428ba62f1f44a23b7494babcca3bc84ac3908f75fb->enter($__internal_a8ade119c6da80818cc142428ba62f1f44a23b7494babcca3bc84ac3908f75fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_1b09cf5ca6a2f0c3fec04b573b03303de207201d9640c9b5fa3d119a7ba0f6fd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1b09cf5ca6a2f0c3fec04b573b03303de207201d9640c9b5fa3d119a7ba0f6fd->enter($__internal_1b09cf5ca6a2f0c3fec04b573b03303de207201d9640c9b5fa3d119a7ba0f6fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 244
         echo "              
               ";
         
-        $__internal_a8ade119c6da80818cc142428ba62f1f44a23b7494babcca3bc84ac3908f75fb->leave($__internal_a8ade119c6da80818cc142428ba62f1f44a23b7494babcca3bc84ac3908f75fb_prof);
+        $__internal_1b09cf5ca6a2f0c3fec04b573b03303de207201d9640c9b5fa3d119a7ba0f6fd->leave($__internal_1b09cf5ca6a2f0c3fec04b573b03303de207201d9640c9b5fa3d119a7ba0f6fd_prof);
 
         
-        $__internal_812ec2fbaa00e946c7c8abc0147ea64cf73c4276959cddc08c190b17fede683f->leave($__internal_812ec2fbaa00e946c7c8abc0147ea64cf73c4276959cddc08c190b17fede683f_prof);
+        $__internal_6ebaa66e1c6f39c86c4c3dc0633d9ca2fcb35e2c23c49b7d760ec4ef24aba3e0->leave($__internal_6ebaa66e1c6f39c86c4c3dc0633d9ca2fcb35e2c23c49b7d760ec4ef24aba3e0_prof);
 
     }
 
-    // line 339
+    // line 259
     public function block_javascript($context, array $blocks = array())
     {
-        $__internal_ccaf5c2f2e84f822df8e4b381b67c56faa0bf1adbf3fde554c3a1d0d04a7797e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_ccaf5c2f2e84f822df8e4b381b67c56faa0bf1adbf3fde554c3a1d0d04a7797e->enter($__internal_ccaf5c2f2e84f822df8e4b381b67c56faa0bf1adbf3fde554c3a1d0d04a7797e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascript"));
+        $__internal_6db262c04df86799daab364bd143825e992274ca6fbf536ff4cb38968f944eb6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_6db262c04df86799daab364bd143825e992274ca6fbf536ff4cb38968f944eb6->enter($__internal_6db262c04df86799daab364bd143825e992274ca6fbf536ff4cb38968f944eb6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascript"));
 
-        $__internal_0e5ac9cc5666ae056005803ae98a761c3d688b19fa8de03dda4711bbceae47f8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0e5ac9cc5666ae056005803ae98a761c3d688b19fa8de03dda4711bbceae47f8->enter($__internal_0e5ac9cc5666ae056005803ae98a761c3d688b19fa8de03dda4711bbceae47f8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascript"));
+        $__internal_9045eaaf9bc869a17a9b23d9cc160848ff36a4c649abef026e0b3bd37d8143b6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9045eaaf9bc869a17a9b23d9cc160848ff36a4c649abef026e0b3bd37d8143b6->enter($__internal_9045eaaf9bc869a17a9b23d9cc160848ff36a4c649abef026e0b3bd37d8143b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascript"));
 
-        // line 340
+        // line 260
         echo "        ";
         
-        $__internal_0e5ac9cc5666ae056005803ae98a761c3d688b19fa8de03dda4711bbceae47f8->leave($__internal_0e5ac9cc5666ae056005803ae98a761c3d688b19fa8de03dda4711bbceae47f8_prof);
+        $__internal_9045eaaf9bc869a17a9b23d9cc160848ff36a4c649abef026e0b3bd37d8143b6->leave($__internal_9045eaaf9bc869a17a9b23d9cc160848ff36a4c649abef026e0b3bd37d8143b6_prof);
 
         
-        $__internal_ccaf5c2f2e84f822df8e4b381b67c56faa0bf1adbf3fde554c3a1d0d04a7797e->leave($__internal_ccaf5c2f2e84f822df8e4b381b67c56faa0bf1adbf3fde554c3a1d0d04a7797e_prof);
+        $__internal_6db262c04df86799daab364bd143825e992274ca6fbf536ff4cb38968f944eb6->leave($__internal_6db262c04df86799daab364bd143825e992274ca6fbf536ff4cb38968f944eb6_prof);
 
     }
 
@@ -532,7 +452,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     public function getDebugInfo()
     {
-        return array (  514 => 340,  505 => 339,  494 => 244,  485 => 243,  474 => 33,  465 => 32,  454 => 341,  452 => 339,  438 => 328,  434 => 327,  430 => 326,  426 => 325,  422 => 324,  418 => 323,  414 => 322,  336 => 246,  334 => 243,  325 => 236,  323 => 235,  300 => 217,  294 => 214,  269 => 192,  263 => 189,  255 => 184,  249 => 183,  244 => 181,  236 => 176,  231 => 174,  149 => 95,  87 => 35,  85 => 32,  73 => 23,  69 => 22,  65 => 21,  61 => 20,  57 => 19,  51 => 16,  46 => 14,  42 => 13,  28 => 1,);
+        return array (  434 => 260,  425 => 259,  414 => 244,  405 => 243,  394 => 33,  385 => 32,  374 => 261,  372 => 259,  367 => 257,  363 => 256,  359 => 255,  355 => 254,  351 => 253,  347 => 252,  343 => 251,  336 => 246,  334 => 243,  325 => 236,  323 => 235,  300 => 217,  294 => 214,  269 => 192,  263 => 189,  255 => 184,  249 => 183,  244 => 181,  236 => 176,  231 => 174,  149 => 95,  87 => 35,  85 => 32,  73 => 23,  69 => 22,  65 => 21,  61 => 20,  57 => 19,  51 => 16,  46 => 14,  42 => 13,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -792,78 +712,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               {% endblock %}
 
       <!-- Main Footer -->
-      <footer class=\"main-footer\">
-        <!-- To the right -->
-        <div class=\"pull-right hidden-xs\">
-          Anything you want
-        </div>
-        <!-- Default to the left -->
-        <strong>Copyright &copy; 2015 <a href=\"#\">Company</a>.</strong> All rights reserved.
-      </footer>
 
-      <!-- Control Sidebar -->
-      <aside class=\"control-sidebar control-sidebar-dark\">
-        <!-- Create the tabs -->
-        <ul class=\"nav nav-tabs nav-justified control-sidebar-tabs\">
-          <li class=\"active\"><a href=\"#control-sidebar-home-tab\" data-toggle=\"tab\"><i class=\"fa fa-home\"></i></a></li>
-          <li><a href=\"#control-sidebar-settings-tab\" data-toggle=\"tab\"><i class=\"fa fa-gears\"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class=\"tab-content\">
-          <!-- Home tab content -->
-          <div class=\"tab-pane active\" id=\"control-sidebar-home-tab\">
-            <h3 class=\"control-sidebar-heading\">Recent Activity</h3>
-            <ul class=\"control-sidebar-menu\">
-              <li>
-                <a href=\"javascript::;\">
-                  <i class=\"menu-icon fa fa-birthday-cake bg-red\"></i>
-                  <div class=\"menu-info\">
-                    <h4 class=\"control-sidebar-subheading\">Langdon's Birthday</h4>
-                    <p>Will be 23 on April 24th</p>
-                  </div>
-                </a>
-              </li>
-            </ul><!-- /.control-sidebar-menu -->
-
-            <h3 class=\"control-sidebar-heading\">Tasks Progress</h3>
-            <ul class=\"control-sidebar-menu\">
-              <li>
-                <a href=\"javascript::;\">
-                  <h4 class=\"control-sidebar-subheading\">
-                    Custom Template Design
-                    <span class=\"label label-danger pull-right\">70%</span>
-                  </h4>
-                  <div class=\"progress progress-xxs\">
-                    <div class=\"progress-bar progress-bar-danger\" style=\"width: 70%\"></div>
-                  </div>
-                </a>
-              </li>
-            </ul><!-- /.control-sidebar-menu -->
-
-          </div><!-- /.tab-pane -->
-          <!-- Stats tab content -->
-          <div class=\"tab-pane\" id=\"control-sidebar-stats-tab\">Stats Tab Content</div><!-- /.tab-pane -->
-          <!-- Settings tab content -->
-          <div class=\"tab-pane\" id=\"control-sidebar-settings-tab\">
-            <form method=\"post\">
-              <h3 class=\"control-sidebar-heading\">General Settings</h3>
-              <div class=\"form-group\">
-                <label class=\"control-sidebar-subheading\">
-                  Report panel usage
-                  <input type=\"checkbox\" class=\"pull-right\" checked>
-                </label>
-                <p>
-                  Some information about this general settings option
-                </p>
-              </div><!-- /.form-group -->
-            </form>
-          </div><!-- /.tab-pane -->
-        </div>
-      </aside><!-- /.control-sidebar -->
-      <!-- Add the sidebar's background. This div must be placed
-           immediately after the control sidebar -->
-      <div class=\"control-sidebar-bg\"></div>
-    </div><!-- ./wrapper -->
 
     <!-- REQUIRED JS SCRIPTS -->
     <script type=\"text/javascript\" src=\"{{ asset('assets/plugins/jQuery/jQuery-2.1.4.min.js') }}\"></script>
@@ -873,16 +722,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script type=\"text/javascript\" src=\"{{ asset('assets/plugins/datatables/jquery.dataTables.min.js') }}\"></script>
     <script type=\"text/javascript\" src=\"{{ asset('assets/plugins/datatables/dataTables.bootstrap.min.js') }}\"></script>
     <script type=\"text/javascript\" src=\"{{ asset('assets/plugins/formvalidation/jquery.validate.js') }}\"></script>
-    <script>
-    \$(function () {
-        \$(\".select2\").select2();
-        \$('table').DataTable( {
-        \"language\": {
-            \"url\": \"http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json\"
-        }
-    } );
-    });
-    </script>
+
     {% block javascript %}
         {% endblock %}
   </body>

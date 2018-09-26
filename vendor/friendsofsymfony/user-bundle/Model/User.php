@@ -362,7 +362,7 @@ abstract class User implements UserInterface, GroupableInterface
      */
     public function setSalt($salt)
     {
-        $this->salt = $salt;
+        $this->salt = null;
 
         return $this;
     }

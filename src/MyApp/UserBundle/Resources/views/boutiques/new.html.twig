@@ -1,6 +1,24 @@
 {% extends 'MyAppUserBundle:Default:base.html.twig' %}
+{% form_theme form '::include/Form/fields.html.twig' %}
 
-{% block body %}
+{% block body -%}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Page Header
+            <small>Optional description</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+            <li class="active">Here</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- Your Page Content Here -->
     <h1>Boutique creation</h1>
 
     {{ form_start(form) }}
@@ -13,4 +31,9 @@
             <a href="{{ path('boutiques_index') }}">Back to the list</a>
         </li>
     </ul>
+        <!-- Your Page Content Here -->
+
+    </section><!-- /.content -->
+</div><!-- /.content-wrapper -->
 {% endblock %}
+

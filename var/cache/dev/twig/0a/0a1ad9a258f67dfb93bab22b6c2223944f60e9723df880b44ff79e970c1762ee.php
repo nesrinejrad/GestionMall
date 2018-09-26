@@ -15,11 +15,11 @@ class __TwigTemplate_ef5c25c35fa933638e46d0a90b35851f6313be731b87a6a4ef6a15d1e78
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7163cc7c63ae86bd199880c89830e03e21d10f36a776741de6e5342d47c18842 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_7163cc7c63ae86bd199880c89830e03e21d10f36a776741de6e5342d47c18842->enter($__internal_7163cc7c63ae86bd199880c89830e03e21d10f36a776741de6e5342d47c18842_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "include/menu.html.twig"));
+        $__internal_6791a356aaa13b202da8b3e68a66cf2bc0ec94c1911760a670522f868a018d4b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_6791a356aaa13b202da8b3e68a66cf2bc0ec94c1911760a670522f868a018d4b->enter($__internal_6791a356aaa13b202da8b3e68a66cf2bc0ec94c1911760a670522f868a018d4b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "include/menu.html.twig"));
 
-        $__internal_8e33c135e3244d285611c19c4f55bf2a2ce0afca44cf80ea0ac39c7af8cba600 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8e33c135e3244d285611c19c4f55bf2a2ce0afca44cf80ea0ac39c7af8cba600->enter($__internal_8e33c135e3244d285611c19c4f55bf2a2ce0afca44cf80ea0ac39c7af8cba600_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "include/menu.html.twig"));
+        $__internal_347e5c2cb5a0e3b3be7efe7e0134d7c6e4fdd7c6d6bedf97960c34a29071df5d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_347e5c2cb5a0e3b3be7efe7e0134d7c6e4fdd7c6d6bedf97960c34a29071df5d->enter($__internal_347e5c2cb5a0e3b3be7efe7e0134d7c6e4fdd7c6d6bedf97960c34a29071df5d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "include/menu.html.twig"));
 
         // line 1
         echo "<ul class=\"sidebar-menu\">
@@ -86,25 +86,22 @@ class __TwigTemplate_ef5c25c35fa933638e46d0a90b35851f6313be731b87a6a4ef6a15d1e78
                 <li class=\"treeview\">
                     <a href=\"";
             // line 33
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_index");
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("afficherProduit");
             echo "\"><i class=\"fa fa-link\"></i> <span>Produit</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
                     <ul class=\"treeview-menu\">
                         <li><a href=\"";
             // line 35
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_index");
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("afficherChaussure");
             echo "\">Chaussure</a></li>
                         <li><a href=\"";
             // line 36
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_new");
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("afficherAccessoire");
             echo "\">Accecoire</a></li>
                         <li><a href=\"";
             // line 37
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_new");
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("afficherVetement");
             echo "\">Vetement</a></li>
-                        <li><a href=\"";
-            // line 38
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_new");
-            echo "\">Afficher tous</a></li>
+
                     </ul>
                 </li>
                 <li class=\"treeview\">
@@ -139,32 +136,18 @@ class __TwigTemplate_ef5c25c35fa933638e46d0a90b35851f6313be731b87a6a4ef6a15d1e78
                 <li class=\"treeview\">
                     <a href=\"";
             // line 56
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_index");
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("affichagePub");
             echo "\"><i class=\"fa fa-link\"></i> <span>Publicité</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
-                    <ul class=\"treeview-menu\">
-                        <li><a href=\"";
-            // line 58
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_index");
-            echo "\">Ajouter</a></li>
-                        <li><a href=\"";
-            // line 59
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_new");
-            echo "\">Modifier</a></li>
-                        <li><a href=\"";
-            // line 60
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_new");
-            echo "\">Supprimer</a></li>
 
-                    </ul>
                 </li>
                 <li class=\"treeview\">
                     <a href=\"";
-            // line 65
+            // line 60
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_index");
             echo "\"><i class=\"fa fa-link\"></i> <span>Livraison</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
                     <ul class=\"treeview-menu\">
                         <li><a href=\"";
-            // line 67
+            // line 62
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_index");
             echo "\">Afficher</a></li>
 
@@ -172,12 +155,12 @@ class __TwigTemplate_ef5c25c35fa933638e46d0a90b35851f6313be731b87a6a4ef6a15d1e78
                 </li>
                 <li class=\"treeview\">
                     <a href=\"";
-            // line 72
+            // line 67
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_index");
             echo "\"><i class=\"fa fa-link\"></i> <span>Statistique</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
                     <ul class=\"treeview-menu\">
                         <li><a href=\"";
-            // line 74
+            // line 69
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_index");
             echo "\">Afficher</a></li>
 
@@ -186,21 +169,21 @@ class __TwigTemplate_ef5c25c35fa933638e46d0a90b35851f6313be731b87a6a4ef6a15d1e78
 
             ";
         }
-        // line 80
+        // line 75
         echo "            
             ";
-        // line 81
+        // line 76
         if (($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_RESPONSABLE") &&  !$this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN"))) {
-            // line 82
+            // line 77
             echo "            <li class=\"treeview\">
               <a><i class=\"fa fa-link\"></i> <span>Ma Boutique</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
               <ul class=\"treeview-menu\">
                 <li><a href=\"";
-            // line 85
+            // line 80
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_showmaboutique");
             echo "\">Afficher ma boutique</a></li>
                 <li><a href=\"";
-            // line 86
+            // line 81
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("boutiques_edit_maboutique");
             echo "\">Editer Ma boutique</a></li>
               </ul>
@@ -208,21 +191,21 @@ class __TwigTemplate_ef5c25c35fa933638e46d0a90b35851f6313be731b87a6a4ef6a15d1e78
             
             <li class=\"\">
                 <a href=\"";
-            // line 91
+            // line 86
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cartefidelites_cartesmaboutique");
             echo "\"><i class=\"fa fa-link\"></i> <span>Cartes Fidelites</span></a>
             </li>
             
             <li class=\"\">
                 <a href=\"";
-            // line 95
+            // line 90
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("abonnement_abonnementsmaboutique");
             echo "\"><i class=\"fa fa-link\"></i> <span>Abonnées</span></a>
             </li>
             
             ";
         }
-        // line 99
+        // line 94
         echo "
 
             
@@ -233,38 +216,78 @@ class __TwigTemplate_ef5c25c35fa933638e46d0a90b35851f6313be731b87a6a4ef6a15d1e78
                 <li><a href=\"{ { path('invitation_new') }}\">Ajouter un dossier</a></li>
               </ul>
             </li>
-            
-            ";
+    <li class=\"treeview\">
+        <a href=\"\"><i class=\"fa fa-link\"></i> <span>Produits</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
+
+        <ul class=\"treeview-menu\">
+            <li><a href=\"";
+        // line 108
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("afficherProduit");
+        echo "\">afficher Produits</a></li>
+            <li><a href=\"";
+        // line 109
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ajoutChaussure");
+        echo "\">ajouter Chaussure</a></li>
+            <li><a href=\"";
+        // line 110
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ajoutAccessoire");
+        echo "\">ajouter Accecoire</a></li>
+            <li><a href=\"";
         // line 111
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ajoutVetement");
+        echo "\">ajouter Vetement</a></li>
+
+        </ul>
+    </li>
+    <li class=\"treeview\">
+        <a href=\"";
+        // line 116
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("afficherO");
+        echo "\"><i class=\"fa fa-link\"></i> <span>Offres</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
+        <ul class=\"treeview-menu\">
+            <li><a href=\"";
+        // line 118
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("afficherO");
+        echo "\">liste Offres</a></li>
+            <li><a href=\"";
+        // line 119
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ajouterOF");
+        echo "\">Ajouter Offres </a></li>
+        </ul>
+    </li>
+
+
+    ";
+        // line 125
         echo "            ";
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
-            // line 112
+            // line 126
             echo "            <li class=\"header\">Paramètres</li>
             <li class=\"treeview\">
               <a href=\"";
-            // line 114
+            // line 128
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("categorie_index");
             echo "\"><i class=\"fa fa-link\"></i> <span>Categories</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
               <ul class=\"treeview-menu\">
                   <li><a href=\"";
-            // line 116
+            // line 130
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("categorie_index");
             echo "\">Liste Categories</a></li>
                 <li><a href=\"";
-            // line 117
+            // line 131
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("categorie_new");
             echo "\">Ajouter une categorie</a></li>
               </ul>
             </li>
             ";
         }
-        // line 121
+        // line 135
         echo "          </ul>";
         
-        $__internal_7163cc7c63ae86bd199880c89830e03e21d10f36a776741de6e5342d47c18842->leave($__internal_7163cc7c63ae86bd199880c89830e03e21d10f36a776741de6e5342d47c18842_prof);
+        $__internal_6791a356aaa13b202da8b3e68a66cf2bc0ec94c1911760a670522f868a018d4b->leave($__internal_6791a356aaa13b202da8b3e68a66cf2bc0ec94c1911760a670522f868a018d4b_prof);
 
         
-        $__internal_8e33c135e3244d285611c19c4f55bf2a2ce0afca44cf80ea0ac39c7af8cba600->leave($__internal_8e33c135e3244d285611c19c4f55bf2a2ce0afca44cf80ea0ac39c7af8cba600_prof);
+        $__internal_347e5c2cb5a0e3b3be7efe7e0134d7c6e4fdd7c6d6bedf97960c34a29071df5d->leave($__internal_347e5c2cb5a0e3b3be7efe7e0134d7c6e4fdd7c6d6bedf97960c34a29071df5d_prof);
 
     }
 
@@ -280,7 +303,7 @@ class __TwigTemplate_ef5c25c35fa933638e46d0a90b35851f6313be731b87a6a4ef6a15d1e78
 
     public function getDebugInfo()
     {
-        return array (  262 => 121,  255 => 117,  251 => 116,  246 => 114,  242 => 112,  239 => 111,  226 => 99,  219 => 95,  212 => 91,  204 => 86,  200 => 85,  195 => 82,  193 => 81,  190 => 80,  181 => 74,  176 => 72,  168 => 67,  163 => 65,  155 => 60,  151 => 59,  147 => 58,  142 => 56,  134 => 51,  130 => 50,  125 => 48,  118 => 44,  113 => 42,  106 => 38,  102 => 37,  98 => 36,  94 => 35,  89 => 33,  82 => 29,  78 => 28,  73 => 26,  65 => 21,  61 => 20,  56 => 18,  48 => 13,  44 => 12,  39 => 10,  36 => 9,  34 => 8,  30 => 6,  25 => 1,);
+        return array (  285 => 135,  278 => 131,  274 => 130,  269 => 128,  265 => 126,  262 => 125,  254 => 119,  250 => 118,  245 => 116,  237 => 111,  233 => 110,  229 => 109,  225 => 108,  209 => 94,  202 => 90,  195 => 86,  187 => 81,  183 => 80,  178 => 77,  176 => 76,  173 => 75,  164 => 69,  159 => 67,  151 => 62,  146 => 60,  139 => 56,  131 => 51,  127 => 50,  122 => 48,  115 => 44,  110 => 42,  102 => 37,  98 => 36,  94 => 35,  89 => 33,  82 => 29,  78 => 28,  73 => 26,  65 => 21,  61 => 20,  56 => 18,  48 => 13,  44 => 12,  39 => 10,  36 => 9,  34 => 8,  30 => 6,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -325,12 +348,12 @@ class __TwigTemplate_ef5c25c35fa933638e46d0a90b35851f6313be731b87a6a4ef6a15d1e78
               </ul>
             </li>
                 <li class=\"treeview\">
-                    <a href=\"{{ path('boutiques_index') }}\"><i class=\"fa fa-link\"></i> <span>Produit</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
+                    <a href=\"{{ path('afficherProduit') }}\"><i class=\"fa fa-link\"></i> <span>Produit</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
                     <ul class=\"treeview-menu\">
-                        <li><a href=\"{{ path('boutiques_index') }}\">Chaussure</a></li>
-                        <li><a href=\"{{ path('boutiques_new') }}\">Accecoire</a></li>
-                        <li><a href=\"{{ path('boutiques_new') }}\">Vetement</a></li>
-                        <li><a href=\"{{ path('boutiques_new') }}\">Afficher tous</a></li>
+                        <li><a href=\"{{ path('afficherChaussure') }}\">Chaussure</a></li>
+                        <li><a href=\"{{ path('afficherAccessoire') }}\">Accecoire</a></li>
+                        <li><a href=\"{{ path('afficherVetement') }}\">Vetement</a></li>
+
                     </ul>
                 </li>
                 <li class=\"treeview\">
@@ -348,13 +371,8 @@ class __TwigTemplate_ef5c25c35fa933638e46d0a90b35851f6313be731b87a6a4ef6a15d1e78
                     </ul>
                 </li>
                 <li class=\"treeview\">
-                    <a href=\"{{ path('boutiques_index') }}\"><i class=\"fa fa-link\"></i> <span>Publicité</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
-                    <ul class=\"treeview-menu\">
-                        <li><a href=\"{{ path('boutiques_index') }}\">Ajouter</a></li>
-                        <li><a href=\"{{ path('boutiques_new') }}\">Modifier</a></li>
-                        <li><a href=\"{{ path('boutiques_new') }}\">Supprimer</a></li>
+                    <a href=\"{{ path('affichagePub') }}\"><i class=\"fa fa-link\"></i> <span>Publicité</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
 
-                    </ul>
                 </li>
                 <li class=\"treeview\">
                     <a href=\"{{ path('boutiques_index') }}\"><i class=\"fa fa-link\"></i> <span>Livraison</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
@@ -401,8 +419,27 @@ class __TwigTemplate_ef5c25c35fa933638e46d0a90b35851f6313be731b87a6a4ef6a15d1e78
                 <li><a href=\"{ { path('invitation_new') }}\">Ajouter un dossier</a></li>
               </ul>
             </li>
-            
-            {#settings#}
+    <li class=\"treeview\">
+        <a href=\"\"><i class=\"fa fa-link\"></i> <span>Produits</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
+
+        <ul class=\"treeview-menu\">
+            <li><a href=\"{{ path('afficherProduit') }}\">afficher Produits</a></li>
+            <li><a href=\"{{ path('ajoutChaussure') }}\">ajouter Chaussure</a></li>
+            <li><a href=\"{{ path('ajoutAccessoire') }}\">ajouter Accecoire</a></li>
+            <li><a href=\"{{ path('ajoutVetement') }}\">ajouter Vetement</a></li>
+
+        </ul>
+    </li>
+    <li class=\"treeview\">
+        <a href=\"{{ path('afficherO') }}\"><i class=\"fa fa-link\"></i> <span>Offres</span> <i class=\"fa fa-angle-left pull-right\"></i></a>
+        <ul class=\"treeview-menu\">
+            <li><a href=\"{{ path('afficherO') }}\">liste Offres</a></li>
+            <li><a href=\"{{ path('ajouterOF') }}\">Ajouter Offres </a></li>
+        </ul>
+    </li>
+
+
+    {#settings#}
             {% if is_granted('ROLE_ADMIN') %}
             <li class=\"header\">Paramètres</li>
             <li class=\"treeview\">

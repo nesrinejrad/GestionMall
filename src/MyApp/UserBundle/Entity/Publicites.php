@@ -42,6 +42,29 @@ class Publicites
      */
     private $dateFinPub;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="blob")
+     */
+    private $image;
+
+    /**
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param string $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
 
     /**
      * Get id

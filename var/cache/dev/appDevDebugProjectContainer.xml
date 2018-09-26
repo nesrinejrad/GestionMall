@@ -20,6 +20,17 @@
       <parameter key="MyAppUserBundle">MyApp\UserBundle\MyAppUserBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="MyAppBoutiqueClientBundle">MyApp\BoutiqueClientBundle\MyAppBoutiqueClientBundle</parameter>
+      <parameter key="MyAppPublicitesBundle">MyApp\PublicitesBundle\MyAppPublicitesBundle</parameter>
+      <parameter key="MyAppProduitsBundle">MyApp\ProduitsBundle\MyAppProduitsBundle</parameter>
+      <parameter key="MyAppOffresBundle">MyApp\OffresBundle\MyAppOffresBundle</parameter>
+      <parameter key="MyAppReclamationsBundle">MyApp\ReclamationsBundle\MyAppReclamationsBundle</parameter>
+      <parameter key="MyAppMyMapBundle">MyApp\MyMapBundle\MyAppMyMapBundle</parameter>
+      <parameter key="MyAppLivraisonsBundle">MyApp\LivraisonsBundle\MyAppLivraisonsBundle</parameter>
+      <parameter key="MyAppAchatsBundle">MyApp\AchatsBundle\MyAppAchatsBundle</parameter>
+      <parameter key="MyAppGrapheBundle">MyApp\GrapheBundle\MyAppGrapheBundle</parameter>
+      <parameter key="ObHighchartsBundle">Ob\HighchartsBundle\ObHighchartsBundle</parameter>
+      <parameter key="NomayaSocialBundle">Nomaya\SocialBundle\NomayaSocialBundle</parameter>
+      <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -82,6 +93,61 @@
         <parameter key="path">C:\wamp64\www\TunisiaMallSam\src\MyApp\BoutiqueClientBundle</parameter>
         <parameter key="namespace">MyApp\BoutiqueClientBundle</parameter>
       </parameter>
+      <parameter key="MyAppPublicitesBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\TunisiaMallSam\src\MyApp\PublicitesBundle</parameter>
+        <parameter key="namespace">MyApp\PublicitesBundle</parameter>
+      </parameter>
+      <parameter key="MyAppProduitsBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\TunisiaMallSam\src\MyApp\ProduitsBundle</parameter>
+        <parameter key="namespace">MyApp\ProduitsBundle</parameter>
+      </parameter>
+      <parameter key="MyAppOffresBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\TunisiaMallSam\src\MyApp\OffresBundle</parameter>
+        <parameter key="namespace">MyApp\OffresBundle</parameter>
+      </parameter>
+      <parameter key="MyAppReclamationsBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\TunisiaMallSam\src\MyApp\ReclamationsBundle</parameter>
+        <parameter key="namespace">MyApp\ReclamationsBundle</parameter>
+      </parameter>
+      <parameter key="MyAppMyMapBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\TunisiaMallSam\src\MyApp\MyMapBundle</parameter>
+        <parameter key="namespace">MyApp\MyMapBundle</parameter>
+      </parameter>
+      <parameter key="MyAppLivraisonsBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\TunisiaMallSam\src\MyApp\LivraisonsBundle</parameter>
+        <parameter key="namespace">MyApp\LivraisonsBundle</parameter>
+      </parameter>
+      <parameter key="MyAppAchatsBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\TunisiaMallSam\src\MyApp\AchatsBundle</parameter>
+        <parameter key="namespace">MyApp\AchatsBundle</parameter>
+      </parameter>
+      <parameter key="MyAppGrapheBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\TunisiaMallSam\src\MyApp\GrapheBundle</parameter>
+        <parameter key="namespace">MyApp\GrapheBundle</parameter>
+      </parameter>
+      <parameter key="ObHighchartsBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\TunisiaMallSam\vendor\ob\highcharts-bundle</parameter>
+        <parameter key="namespace">Ob\HighchartsBundle</parameter>
+      </parameter>
+      <parameter key="NomayaSocialBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\TunisiaMallSam\vendor\nomaya\social-bundle\Nomaya\SocialBundle</parameter>
+        <parameter key="namespace">Nomaya\SocialBundle</parameter>
+      </parameter>
+      <parameter key="KnpPaginatorBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle</parameter>
+        <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
+      </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
         <parameter key="path">C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle</parameter>
@@ -114,7 +180,7 @@
     <parameter key="database_port">null</parameter>
     <parameter key="database_name">tunisiamall1.1</parameter>
     <parameter key="database_user">root</parameter>
-    <parameter key="database_password">null</parameter>
+    <parameter key="database_password">nesrina0510</parameter>
     <parameter key="mailer_transport">gmail</parameter>
     <parameter key="mailer_host">smtp.gmail.com</parameter>
     <parameter key="mailer_user">esprit.tunisiamal@gmail.com</parameter>
@@ -404,6 +470,59 @@
       <parameter>ResetPassword</parameter>
       <parameter>Default</parameter>
     </parameter>
+    <parameter key="ob_highcharts.twig_extension.class">Ob\HighchartsBundle\Twig\HighchartsExtension</parameter>
+    <parameter key="buttons.facebook" type="collection">
+      <parameter key="url">www.facebook.com/Esprit</parameter>
+      <parameter key="locale">fr_FR</parameter>
+      <parameter key="send">false</parameter>
+      <parameter key="width">300</parameter>
+      <parameter key="showFaces">false</parameter>
+      <parameter key="layout">button_count</parameter>
+      <parameter key="share">true</parameter>
+    </parameter>
+    <parameter key="buttons.twitter" type="collection">
+      <parameter key="url">null</parameter>
+      <parameter key="locale">fr</parameter>
+      <parameter key="message">Je veux partager ça avec vous</parameter>
+      <parameter key="text">Tweet</parameter>
+      <parameter key="via">Esprit Test</parameter>
+      <parameter key="tag">Esprit</parameter>
+      <parameter key="showFaces">false</parameter>
+      <parameter key="send">true</parameter>
+      <parameter key="share">true</parameter>
+    </parameter>
+    <parameter key="buttons.googleplus" type="collection">
+      <parameter key="url">null</parameter>
+      <parameter key="locale">fr</parameter>
+      <parameter key="size">medium</parameter>
+      <parameter key="annotation">bubble</parameter>
+      <parameter key="width">300</parameter>
+      <parameter key="showFaces">false</parameter>
+      <parameter key="send">true</parameter>
+      <parameter key="share">true</parameter>
+    </parameter>
+    <parameter key="buttons.linkedin" type="collection">
+      <parameter key="url">null</parameter>
+      <parameter key="locale">fr_FR</parameter>
+      <parameter key="counter">right</parameter>
+      <parameter key="showFaces">false</parameter>
+      <parameter key="send">true</parameter>
+      <parameter key="share">true</parameter>
+    </parameter>
+    <parameter key="buttons.pinterest" type="collection">
+      <parameter key="url">null</parameter>
+      <parameter key="locale">fr</parameter>
+      <parameter key="showFaces">false</parameter>
+      <parameter key="send">true</parameter>
+      <parameter key="share">true</parameter>
+    </parameter>
+    <parameter key="social.theme">default</parameter>
+    <parameter key="knp_paginator.class">Knp\Component\Pager\Paginator</parameter>
+    <parameter key="knp_paginator.helper.processor.class">Knp\Bundle\PaginatorBundle\Helper\Processor</parameter>
+    <parameter key="knp_paginator.template.pagination">@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig</parameter>
+    <parameter key="knp_paginator.template.filtration">KnpPaginatorBundle:Pagination:filtration.html.twig</parameter>
+    <parameter key="knp_paginator.template.sortable">@KnpPaginator/Pagination/sortable_link.html.twig</parameter>
+    <parameter key="knp_paginator.page_range">5</parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
@@ -679,11 +798,6 @@
       <tag name="monolog.logger" channel="console"/>
       <argument type="service" id="monolog.logger.console" on-invalid="null"/>
     </service>
-    <service id="property_accessor" class="Symfony\Component\PropertyAccess\PropertyAccessor">
-      <argument>false</argument>
-      <argument>false</argument>
-      <argument type="service" id="cache.property_access" on-invalid="ignore"/>
-    </service>
     <service id="cache.app" class="Symfony\Component\Cache\Adapter\TraceableAdapter">
       <tag name="cache.pool"/>
       <tag name="cache.pool" clearer="cache.default_clearer" unlazy="1"/>
@@ -714,7 +828,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>5s6TbtNZs4Q4sUeMZ-oHuG</argument>
+      <argument>HaueEOP8FrPHgY3Pma-dzT</argument>
       <argument>C:\wamp64\www\TunisiaMallSam\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -724,7 +838,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>5s6TbtNZs4Q4sUeMZ-oHuG</argument>
+      <argument>HaueEOP8FrPHgY3Pma-dzT</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -1029,6 +1143,7 @@
     <service id="security.csrf.token_manager" class="Symfony\Component\Security\Csrf\CsrfTokenManager">
       <argument type="service" id="security.csrf.token_generator"/>
       <argument type="service" id="security.csrf.token_storage"/>
+      <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="assets.packages" class="Symfony\Component\Asset\Packages">
       <argument type="service" id="assets._default_package"/>
@@ -1272,6 +1387,7 @@
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.de.xlf</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.de.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.de.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.de.xliff</argument>
           </argument>
           <argument key="el" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.el.xlf</argument>
@@ -1286,6 +1402,7 @@
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.en.xlf</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.en.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.en.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.en.xliff</argument>
           </argument>
           <argument key="es" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.es.xlf</argument>
@@ -1293,6 +1410,7 @@
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.es.xlf</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.es.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.es.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.es.xliff</argument>
           </argument>
           <argument key="et" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.et.xlf</argument>
@@ -1324,6 +1442,7 @@
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.fr.xlf</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fr.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fr.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.fr.xliff</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.gl.xlf</argument>
@@ -1362,6 +1481,7 @@
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.id.xlf</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.id.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.id.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.id.xliff</argument>
           </argument>
           <argument key="it" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.it.xlf</argument>
@@ -1369,6 +1489,7 @@
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.it.xlf</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.it.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.it.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.it.xliff</argument>
           </argument>
           <argument key="ja" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ja.xlf</argument>
@@ -1389,6 +1510,7 @@
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.lt.xlf</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.lt.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.lt.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.lt.xliff</argument>
           </argument>
           <argument key="lv" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.lv.xlf</argument>
@@ -1407,6 +1529,7 @@
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.nl.xlf</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.nl.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.nl.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.nl.xliff</argument>
           </argument>
           <argument key="nn" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.nn.xlf</argument>
@@ -1422,6 +1545,7 @@
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pl.xlf</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.pl.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.pl.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.pl.xliff</argument>
           </argument>
           <argument key="pt" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pt.xlf</argument>
@@ -1442,6 +1566,7 @@
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ro.xlf</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ro.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ro.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ro.xliff</argument>
           </argument>
           <argument key="ru" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ru.xlf</argument>
@@ -1449,6 +1574,7 @@
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ru.xlf</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ru.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ru.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ru.xliff</argument>
           </argument>
           <argument key="sk" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sk.xlf</argument>
@@ -1541,10 +1667,14 @@
           <argument key="ky" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ky.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ky.yml</argument>
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.ky.xliff</argument>
           </argument>
           <argument key="nb" type="collection">
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.nb.yml</argument>
             <argument>C:\wamp64\www\TunisiaMallSam\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.nb.yml</argument>
+          </argument>
+          <argument key="sw" type="collection">
+            <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/translations\KnpPaginatorBundle.sw.xliff</argument>
           </argument>
         </argument>
       </argument>
@@ -1924,6 +2054,14 @@
         <argument type="collection">
           <argument type="service" id="data_collector.router"/>
           <argument>onKernelController</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>onKernelRequest</argument>
         </argument>
         <argument>0</argument>
       </call>
@@ -2375,6 +2513,46 @@
         </argument>
         <argument>-128</argument>
       </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.paginate"/>
+          <argument>before</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.paginate"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sortable"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.filtration"/>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument type="service" id="knp_paginator.subscriber.sliding_pagination"/>
+          <argument>pagination</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
     </service>
     <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver">
       <tag name="monolog.logger" channel="request"/>
@@ -2445,7 +2623,6 @@
       <argument type="service" id="routing.resolver"/>
     </service>
     <service id="router.default" class="Symfony\Bundle\FrameworkBundle\Routing\Router" public="false">
-      <tag name="monolog.logger" channel="router"/>
       <argument type="service" id="service_container"/>
       <argument>C:\wamp64\www\TunisiaMallSam/app/config/routing_dev.yml</argument>
       <argument type="collection">
@@ -2462,7 +2639,6 @@
         <argument key="strict_requirements">true</argument>
       </argument>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
-      <argument type="service" id="monolog.logger.router" on-invalid="ignore"/>
       <call method="setConfigCacheFactory">
         <argument type="service" id="config_cache_factory"/>
       </call>
@@ -2516,6 +2692,11 @@
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
       <argument type="service" id="3_855e39bf0875a37c6324f7885433a9d2d7cebb317510c8979e416a6be005fc21"/>
     </service>
+    <service id="property_accessor" class="Symfony\Component\PropertyAccess\PropertyAccessor">
+      <argument>false</argument>
+      <argument>false</argument>
+      <argument type="service" id="cache.property_access" on-invalid="ignore"/>
+    </service>
     <service id="security.authorization_checker" class="Symfony\Component\Security\Core\Authorization\AuthorizationChecker">
       <argument type="service" id="security.token_storage"/>
       <argument type="service" id="security.authentication.manager"/>
@@ -2547,9 +2728,9 @@
     <service id="security.encoder_factory.generic" class="Symfony\Component\Security\Core\Encoder\EncoderFactory" public="false">
       <argument type="collection">
         <argument key="FOS\UserBundle\Model\UserInterface" type="collection">
-          <argument key="class">Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder</argument>
+          <argument key="class">Symfony\Component\Security\Core\Encoder\PlaintextPasswordEncoder</argument>
           <argument key="arguments" type="collection">
-            <argument>13</argument>
+            <argument>false</argument>
           </argument>
         </argument>
       </argument>
@@ -2730,13 +2911,6 @@
         <argument type="service" id="security.request_matcher.f189ccf04ec14855874127f24f22ff2dffd0f6fc1b8da19339df624dff9fc9a60ed342c0"/>
         <argument type="collection">
           <argument>IS_AUTHENTICATED_ANONYMOUSLY</argument>
-        </argument>
-        <argument>null</argument>
-      </call>
-      <call method="add">
-        <argument type="service" id="security.request_matcher.ca0a153f5e6b55c6bdadfeb09198b4ee376cca71577b1e5e001ca83d26ee2ac1db22cb8f"/>
-        <argument type="collection">
-          <argument>ROLE_ADMIN</argument>
         </argument>
         <argument>null</argument>
       </call>
@@ -3142,12 +3316,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5a130ac5369ed9.16097842</argument>
+      <argument>5a559cc15acc05.63236017</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5a130ac5369ed9.16097842</argument>
+      <argument>5a559cc15acc05.63236017</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3201,9 +3375,6 @@
     </service>
     <service id="security.request_matcher.f189ccf04ec14855874127f24f22ff2dffd0f6fc1b8da19339df624dff9fc9a60ed342c0" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
       <argument>^/demande/create</argument>
-    </service>
-    <service id="security.request_matcher.ca0a153f5e6b55c6bdadfeb09198b4ee376cca71577b1e5e001ca83d26ee2ac1db22cb8f" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-      <argument>^/demande</argument>
     </service>
     <service id="security.console.user_password_encoder_command" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand" public="false">
       <tag name="console.command"/>
@@ -3285,6 +3456,18 @@
         <argument type="service" id="doctrine.twig.doctrine_extension"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="ob_highcharts.twig.highcharts_extension"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="twig.extension.nomaya_social_bar"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="twig.extension.nomaya_social_links"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="knp_paginator.twig.extension.pagination"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.dump"/>
       </call>
       <call method="addExtension">
@@ -3319,12 +3502,16 @@
       <tag name="container.service_subscriber.locator" id="service_locator.26ac001b3ede28481ac0de703666b4d7"/>
       <argument type="service" id="service_locator.26ac001b3ede28481ac0de703666b4d7"/>
       <argument type="service" id="templating.finder" on-invalid="ignore"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form">null</argument>
+      </argument>
     </service>
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
       <argument type="service" id="kernel"/>
       <argument>C:\wamp64\www\TunisiaMallSam\app</argument>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Bridge\Twig/Resources/views/Form">null</argument>
+      </argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
@@ -3373,6 +3560,46 @@
       <call method="addPath">
         <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\BoutiqueClientBundle/Resources/views</argument>
         <argument>MyAppBoutiqueClient</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\PublicitesBundle/Resources/views</argument>
+        <argument>MyAppPublicites</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\ProduitsBundle/Resources/views</argument>
+        <argument>MyAppProduits</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\OffresBundle/Resources/views</argument>
+        <argument>MyAppOffres</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\ReclamationsBundle/Resources/views</argument>
+        <argument>MyAppReclamations</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\MyMapBundle/Resources/views</argument>
+        <argument>MyAppMyMap</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\LivraisonsBundle/Resources/views</argument>
+        <argument>MyAppLivraisons</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\AchatsBundle/Resources/views</argument>
+        <argument>MyAppAchats</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\GrapheBundle/Resources/views</argument>
+        <argument>MyAppGraphe</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\vendor\nomaya\social-bundle\Nomaya\SocialBundle/Resources/views</argument>
+        <argument>NomayaSocial</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>KnpPaginator</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
@@ -3535,6 +3762,46 @@
       <call method="addPath">
         <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\BoutiqueClientBundle/Resources/views</argument>
         <argument>MyAppBoutiqueClient</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\PublicitesBundle/Resources/views</argument>
+        <argument>MyAppPublicites</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\ProduitsBundle/Resources/views</argument>
+        <argument>MyAppProduits</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\OffresBundle/Resources/views</argument>
+        <argument>MyAppOffres</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\ReclamationsBundle/Resources/views</argument>
+        <argument>MyAppReclamations</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\MyMapBundle/Resources/views</argument>
+        <argument>MyAppMyMap</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\LivraisonsBundle/Resources/views</argument>
+        <argument>MyAppLivraisons</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\AchatsBundle/Resources/views</argument>
+        <argument>MyAppAchats</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\src\MyApp\GrapheBundle/Resources/views</argument>
+        <argument>MyAppGraphe</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\vendor\nomaya\social-bundle\Nomaya\SocialBundle/Resources/views</argument>
+        <argument>NomayaSocial</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\TunisiaMallSam\vendor\knplabs\knp-paginator-bundle/Resources/views</argument>
+        <argument>KnpPaginator</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp64\www\TunisiaMallSam\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
@@ -3843,7 +4110,7 @@
         <argument key="port">null</argument>
         <argument key="dbname">tunisiamall1.1</argument>
         <argument key="user">root</argument>
-        <argument key="password">null</argument>
+        <argument key="password">nesrina0510</argument>
         <argument key="charset">UTF8</argument>
         <argument key="driverOptions" type="collection"/>
         <argument key="defaultTableOptions" type="collection"/>
@@ -3868,6 +4135,9 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" public="false" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true">
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
+    </service>
+    <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
+      <argument type="service" id="service_locator.6f24348b77840ec12a20c22a3f985cf7"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -3979,6 +4249,9 @@
       </call>
       <call method="setEntityListenerResolver">
         <argument type="service" id="doctrine.orm.default_entity_listener_resolver"/>
+      </call>
+      <call method="setRepositoryFactory">
+        <argument type="service" id="doctrine.orm.container_repository_factory"/>
       </call>
     </service>
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
@@ -4281,6 +4554,74 @@
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="router.default"/>
       <argument>86400</argument>
+    </service>
+    <service id="ob_highcharts.twig.highcharts_extension" class="Ob\HighchartsBundle\Twig\HighchartsExtension">
+      <tag name="twig.extension"/>
+    </service>
+    <service id="nomaya.socialBarHelper" class="Nomaya\SocialBundle\Helpers\SocialBarHelper">
+      <tag name="templating.helper" alias="social-buttons"/>
+      <argument type="service" id="templating.engine.twig"/>
+    </service>
+    <service id="twig.extension.nomaya_social_bar" class="Nomaya\SocialBundle\Twig\Extension\NomayaTwigSocialBar">
+      <tag name="twig.extension"/>
+      <argument type="service" id="service_container"/>
+      <call method="setNetworks">
+        <argument type="collection">
+          <argument>facebook</argument>
+          <argument>twitter</argument>
+          <argument>googleplus</argument>
+          <argument>linkedin</argument>
+          <argument>pinterest</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="nomaya.socialLinksHelper" class="Nomaya\SocialBundle\Helpers\SocialLinksHelper">
+      <tag name="templating.helper" alias="social-links"/>
+      <argument type="service" id="templating.engine.twig"/>
+    </service>
+    <service id="twig.extension.nomaya_social_links" class="Nomaya\SocialBundle\Twig\Extension\NomayaTwigSocialLinks">
+      <tag name="twig.extension"/>
+      <argument type="service" id="service_container"/>
+    </service>
+    <service id="knp_paginator" class="Knp\Component\Pager\Paginator">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <call method="setDefaultPaginatorOptions">
+        <argument type="collection">
+          <argument key="pageParameterName">page</argument>
+          <argument key="sortFieldParameterName">sort</argument>
+          <argument key="sortDirectionParameterName">direction</argument>
+          <argument key="filterFieldParameterName">filterField</argument>
+          <argument key="filterValueParameterName">filterValue</argument>
+          <argument key="distinct">true</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="knp_paginator.subscriber.paginate" class="Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sortable" class="Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.filtration" class="Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sliding_pagination" class="Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+      <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
+      <argument type="collection">
+        <argument key="defaultPaginationTemplate">@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig</argument>
+        <argument key="defaultSortableTemplate">@KnpPaginator/Pagination/sortable_link.html.twig</argument>
+        <argument key="defaultFiltrationTemplate">KnpPaginatorBundle:Pagination:filtration.html.twig</argument>
+        <argument key="defaultPageRange">5</argument>
+      </argument>
+    </service>
+    <service id="knp_paginator.helper.processor" class="Knp\Bundle\PaginatorBundle\Helper\Processor">
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="translator.data_collector"/>
+    </service>
+    <service id="knp_paginator.twig.extension.pagination" class="Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="knp_paginator.helper.processor"/>
     </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
@@ -4617,21 +4958,6 @@
         <argument type="service" id="monolog.handler.server_log"/>
       </call>
     </service>
-    <service id="monolog.logger.router" class="Symfony\Bridge\Monolog\Logger">
-      <argument>router</argument>
-      <call method="pushProcessor">
-        <argument type="service" id="debug.log_processor"/>
-      </call>
-      <call method="pushHandler">
-        <argument type="service" id="monolog.handler.server_log"/>
-      </call>
-      <call method="pushHandler">
-        <argument type="service" id="monolog.handler.console"/>
-      </call>
-      <call method="pushHandler">
-        <argument type="service" id="monolog.handler.main"/>
-      </call>
-    </service>
     <service id="monolog.logger.security" class="Symfony\Bridge\Monolog\Logger">
       <argument>security</argument>
       <call method="pushProcessor">
@@ -4660,6 +4986,10 @@
       </call>
     </service>
     <service id="monolog.handler.null_internal" class="Monolog\Handler\NullHandler"/>
+    <service id="service_locator.6f24348b77840ec12a20c22a3f985cf7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
     <service id="debug.event_dispatcher.inner" class="Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher" public="false">
       <argument type="service" id="service_container"/>
     </service>
@@ -4725,7 +5055,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>7AbUwoHACA</argument>
       <argument>0</argument>
-      <argument>5s6TbtNZs4Q4sUeMZ-oHuG</argument>
+      <argument>HaueEOP8FrPHgY3Pma-dzT</argument>
       <argument>C:\wamp64\www\TunisiaMallSam\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4733,7 +5063,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>2AtgiHVJMe</argument>
       <argument>0</argument>
-      <argument>5s6TbtNZs4Q4sUeMZ-oHuG</argument>
+      <argument>HaueEOP8FrPHgY3Pma-dzT</argument>
       <argument>C:\wamp64\www\TunisiaMallSam\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4741,7 +5071,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>MraD1PxHAX</argument>
       <argument>0</argument>
-      <argument>5s6TbtNZs4Q4sUeMZ-oHuG</argument>
+      <argument>HaueEOP8FrPHgY3Pma-dzT</argument>
       <argument>C:\wamp64\www\TunisiaMallSam\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4749,7 +5079,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>X++IXE3rJE</argument>
       <argument>0</argument>
-      <argument>5s6TbtNZs4Q4sUeMZ-oHuG</argument>
+      <argument>HaueEOP8FrPHgY3Pma-dzT</argument>
       <argument>C:\wamp64\www\TunisiaMallSam\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4769,7 +5099,6 @@
     <service id="Symfony\Component\HttpKernel\KernelInterface" alias="kernel" public="false"/>
     <service id="Symfony\Component\Filesystem\Filesystem" alias="filesystem" public="false"/>
     <service id="Symfony\Component\HttpKernel\Config\FileLocator" alias="file_locator" public="false"/>
-    <service id="Symfony\Component\PropertyAccess\PropertyAccessorInterface" alias="property_accessor" public="false"/>
     <service id="cache.app_clearer" alias="cache.default_clearer"/>
     <service id="Psr\Cache\CacheItemPoolInterface" alias="cache.app" public="false"/>
     <service id="Symfony\Component\Translation\TranslatorInterface" alias="translator.data_collector" public="false"/>
@@ -4804,6 +5133,7 @@
     <service id="Symfony\Component\Routing\RequestContext" alias="router.request_context" public="false"/>
     <service id="annotation_reader" alias="annotations.cached_reader"/>
     <service id="Doctrine\Common\Annotations\Reader" alias="annotations.cached_reader" public="false"/>
+    <service id="Symfony\Component\PropertyAccess\PropertyAccessorInterface" alias="property_accessor" public="false"/>
     <service id="Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface" alias="security.authorization_checker" public="false"/>
     <service id="Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface" alias="security.token_storage" public="false"/>
     <service id="security.encoder_factory" alias="security.encoder_factory.generic"/>
@@ -4835,6 +5165,7 @@
     <service id="Doctrine\DBAL\Driver\Connection" alias="doctrine.dbal.default_connection" public="false"/>
     <service id="Doctrine\DBAL\Connection" alias="doctrine.dbal.default_connection" public="false"/>
     <service id="Doctrine\Common\Persistence\ManagerRegistry" alias="doctrine" public="false"/>
+    <service id="Symfony\Bridge\Doctrine\RegistryInterface" alias="doctrine" public="false"/>
     <service id="database_connection" alias="doctrine.dbal.default_connection"/>
     <service id="doctrine.dbal.event_manager" alias="doctrine.dbal.default_connection.event_manager" public="false"/>
     <service id="Doctrine\Common\Persistence\ObjectManager" alias="doctrine.orm.default_entity_manager" public="false"/>

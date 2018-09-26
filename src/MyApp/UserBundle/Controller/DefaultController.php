@@ -11,7 +11,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('MyAppUserBundle:Default:acceuilClient.html.twig');
+        return $this->render('@MyAppUser/Default/homePage.html.twig');
     }
 
 
@@ -26,7 +26,7 @@ class DefaultController extends Controller
     }
     public function connecterAction()
     {
-        return $this->render('MyAppUserBundle:Default:acceuilClient.html.twig');
+        return $this->render('@MyAppUser/Default/homePage.html.twig');
     }
     public function inscriFormAction(Request $req)
     {
@@ -66,4 +66,11 @@ class DefaultController extends Controller
 
     return new \Symfony\Component\HttpFoundation\Response('hello');
     }
+
+    public function homePageCAction(){
+
+        return $this->render('@MyAppUser/Default/homePage.html.twig');
+    }
+
+
 }

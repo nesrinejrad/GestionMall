@@ -42,9 +42,9 @@ class DemandeController extends Controller
             $em->persist($demande);
             $em->flush();
 
-            return $this->redirectToRoute('demande_show', array('id' => $demande->getId()));
+            return $this->redirectToRoute('general', array('id' => $demande->getId()));
         }
-        
+
         return $this->render('MyAppUserBundle:demande:new.html.twig', array(
             'demande' => $demande,
             'form' => $form->createView(),
@@ -119,10 +119,10 @@ class DemandeController extends Controller
             ->setAction($this->generateUrl('demande_delete', array('id' => $demande->getId())))
             ->setMethod('DELETE')
             ->getForm()
-        ;
+            ;
     }
-    
-     /**
+
+    /**
      * Annuler a Demande entity.
      *
      */
@@ -143,7 +143,7 @@ class DemandeController extends Controller
             'annulee',
             'La demande '. $entity->getId() .' est annulée !'
         );
-        
+
         return $this->redirect($this->generateUrl('demande'));
     }
 
@@ -164,29 +164,29 @@ class DemandeController extends Controller
         $invitation = new \MyApp\UserBundle\Entity\Invitation();
         $invitation->setEmail($entity->getEmail());
         $invitation->isSent(1);
-        
+
         /* envoi du mail */
         $message = \Swift_Message::newInstance()
-                ->setSubject('Code d\'inscription MyAppinnov')
-                ->setFrom($this->getParameter('mailer_user'))
-                ->setTo($entity->getEmail())
-                ->setBody(
+            ->setSubject('Code d\'inscription MyAppinnov')
+            ->setFrom($this->getParameter('mailer_user'))
+            ->setTo($entity->getEmail())
+            ->setBody(
                 $this->renderView(
-                        'Emails/codedemande.html.twig', array('code' => $invitation->getCode())
+                    'Emails/codedemande.html.twig', array('code' => $invitation->getCode())
                 ), 'text/html'
-        );
+            );
         $this->get('mailer')->send($message);
         /* fin */
-        
+
         $this->addFlash(
             'acceptee',
             'La demande '. $entity->getId() .' est acceptée et le code d\'invitation est envoyé par email au candidat !'
         );
-        
+
         $em->persist($invitation);
         $em->persist($entity);
         $em->flush();
-        
+
         return $this->redirect($this->generateUrl('demande_index'));
     }
 }

@@ -28,20 +28,13 @@ class Boutiques
      */
     private $nomBoutique;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="Categorie", inversedBy="boutiques")
-     * @ORM\JoinColumn(name="categorie_id", referencedColumnName="id")
-     */
+
     private $categorie;
     
-    /**
-     * @ORM\OneToMany(targetEntity="carteFidelites", mappedBy="boutique")
-     */
+
     private $cartes;
     
-    /**
-     * @ORM\OneToMany(targetEntity="abonnement", mappedBy="boutique")
-     */
+
     private $abonnees;
 
     /**
@@ -52,11 +45,7 @@ class Boutiques
     private $descriptionBoutique;
 
 
-    /**
-     * @var User
-     * 
-     * @ORM\OneToOne(targetEntity="User", mappedBy="boutique" , cascade={"all"})
-     */
+
     private $responsable;
 
 

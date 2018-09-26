@@ -19,6 +19,17 @@ class AppKernel extends Kernel
             new MyApp\UserBundle\MyAppUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new MyApp\BoutiqueClientBundle\MyAppBoutiqueClientBundle(),
+            new MyApp\PublicitesBundle\MyAppPublicitesBundle(),
+            new MyApp\ProduitsBundle\MyAppProduitsBundle(),
+            new MyApp\OffresBundle\MyAppOffresBundle(),
+            new MyApp\ReclamationsBundle\MyAppReclamationsBundle(),
+            new MyApp\MyMapBundle\MyAppMyMapBundle(),
+            new MyApp\LivraisonsBundle\MyAppLivraisonsBundle(),
+            new MyApp\AchatsBundle\MyAppAchatsBundle(),
+            new MyApp\GrapheBundle\MyAppGrapheBundle(),
+            new Ob\HighchartsBundle\ObHighchartsBundle(),
+            new Nomaya\SocialBundle\NomayaSocialBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

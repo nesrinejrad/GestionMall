@@ -52,6 +52,41 @@ class Reclamations
     private $idClient;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="emailRec", type="string", length=255)
+     */
+    private $emailRec;
+
+    /**
+     * @return string
+     */
+    public function getEmailRec()
+    {
+        return $this->emailRec;
+    }
+
+    /**
+     * @param string $emailRec
+     */
+    public function setEmailRec($emailRec)
+    {
+        $this->emailRec = $emailRec;
+    }
+
+
+
+    /**
+     * Reclamations constructor.
+     * @param int $id
+     */
+    public function __construct()
+    {
+        $this->etatRec="nonVue";
+    }
+
+
+    /**
      * @return mixed
      */
     public function getIdClient()
@@ -151,5 +186,7 @@ class Reclamations
     {
         return $this->etatRec;
     }
+
+
 }
 

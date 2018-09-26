@@ -37,13 +37,13 @@ class User extends BaseUser {
     private $prenom;
     
     /**
-     * @ORM\Column(type="string",length=45)
+     * @ORM\Column(type="string",length=45,nullable=true)
      *
      */
     private $tel;
     
     /**
-     * @ORM\Column(type="string",length=255)
+     * @ORM\Column(type="string",length=255,nullable=true)
      *
      */
     private $adresse;

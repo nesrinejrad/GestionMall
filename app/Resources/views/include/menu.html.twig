@@ -30,12 +30,12 @@
               </ul>
             </li>
                 <li class="treeview">
-                    <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Produit</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="{{ path('afficherProduit') }}"><i class="fa fa-link"></i> <span>Produit</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ path('boutiques_index') }}">Chaussure</a></li>
-                        <li><a href="{{ path('boutiques_new') }}">Accecoire</a></li>
-                        <li><a href="{{ path('boutiques_new') }}">Vetement</a></li>
-                        <li><a href="{{ path('boutiques_new') }}">Afficher tous</a></li>
+                        <li><a href="{{ path('afficherChaussure') }}">Chaussure</a></li>
+                        <li><a href="{{ path('afficherAccessoire') }}">Accecoire</a></li>
+                        <li><a href="{{ path('afficherVetement') }}">Vetement</a></li>
+
                     </ul>
                 </li>
                 <li class="treeview">
@@ -45,40 +45,31 @@
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Mail</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="{{ path('afficherRec') }}"><i class="fa fa-link"></i> <span>Reclamations</span> <i class="fa fa-angle-left pull-right"></i></a>
+
+                </li>
+                <li class="treeview">
+                    <a href="{{ path('affichagePub') }}"><i class="fa fa-link"></i> <span>Publicité</span> <i class="fa fa-angle-left pull-right"></i></a>
+
+                </li>
+                <li class="treeview">
+                    <a href="{{ path('affLivraisons') }}"><i class="fa fa-link"></i> <span>Livraison</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ path('boutiques_index') }}">Nouveau Mail</a></li>
-                        <li><a href="{{ path('boutiques_new') }}">Boite de reception</a></li>
+                        <li><a href="{{ path('affLivraisons') }}">Afficher</a></li>
 
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Publicité</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <a href="{{ path('_grapheChartLine') }}"><i class="fa fa-link"></i> <span>Statistique</span> <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ path('boutiques_index') }}">Ajouter</a></li>
-                        <li><a href="{{ path('boutiques_new') }}">Modifier</a></li>
-                        <li><a href="{{ path('boutiques_new') }}">Supprimer</a></li>
-
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Livraison</span> <i class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{ path('boutiques_index') }}">Afficher</a></li>
-
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="{{ path('boutiques_index') }}"><i class="fa fa-link"></i> <span>Statistique</span> <i class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="{{ path('boutiques_index') }}">Afficher</a></li>
+                        <li><a href="{{ path('_grapheChartLine') }}">Afficher</a></li>
 
                     </ul>
                 </li>
 
             {% endif %}
             
-            {% if is_granted('ROLE_RESPONSABLE') and not is_granted('ROLE_ADMIN') %}
+            {% if is_granted('ROLE_AGENT') and not is_granted('ROLE_ADMIN') %}
             <li class="treeview">
               <a><i class="fa fa-link"></i> <span>Ma Boutique</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
@@ -94,6 +85,10 @@
             <li class="">
                 <a href="{{ path('abonnement_abonnementsmaboutique') }}"><i class="fa fa-link"></i> <span>Abonnées</span></a>
             </li>
+                <li class="">
+                <a href="{{ path('ajouterRec') }}"><i class="fa fa-link"></i> <span>Envoyer Reclamation</span></a>
+            </li>
+
             
             {% endif %}
 
@@ -106,8 +101,27 @@
                 <li><a href="{ { path('invitation_new') }}">Ajouter un dossier</a></li>
               </ul>
             </li>
-            
-            {#settings#}
+    <li class="treeview">
+        <a href=""><i class="fa fa-link"></i> <span>Produits</span> <i class="fa fa-angle-left pull-right"></i></a>
+
+        <ul class="treeview-menu">
+            <li><a href="{{ path('afficherProduit') }}">afficher Produits</a></li>
+            <li><a href="{{ path('ajoutChaussure') }}">ajouter Chaussure</a></li>
+            <li><a href="{{ path('ajoutAccessoire') }}">ajouter Accecoire</a></li>
+            <li><a href="{{ path('ajoutVetement') }}">ajouter Vetement</a></li>
+
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="{{ path('afficherO') }}"><i class="fa fa-link"></i> <span>Offres</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+            <li><a href="{{ path('afficherO') }}">liste Offres</a></li>
+            <li><a href="{{ path('ajouterOF') }}">Ajouter Offres </a></li>
+        </ul>
+    </li>
+
+
+    {#settings#}
             {% if is_granted('ROLE_ADMIN') %}
             <li class="header">Paramètres</li>
             <li class="treeview">

@@ -70,6 +70,13 @@ class Produits
      */
     private $materiaux;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="blob", nullable=false)
+     */
+    private $image;
+
 
     /**
      *
@@ -86,6 +93,22 @@ class Produits
     public function getIdBoutique()
     {
         return $this->idBoutique;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param string $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
     }
 
     /**

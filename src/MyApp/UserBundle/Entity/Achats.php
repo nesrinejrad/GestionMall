@@ -67,6 +67,25 @@ class Achats
     private $idClient;
 
     /**
+     * Achats constructor.
+     * @param int $idProduit
+     * @param string $nomProduit
+     * @param string $categorieProduit
+     * @param float $prixUnitair
+     * @param int $quantite
+     * @param $idClient
+     */
+    public function __construct($idProduit, $nomProduit, $categorieProduit, $prixUnitair, $quantite, $idClient)
+    {
+        $this->idProduit = $idProduit;
+        $this->nomProduit = $nomProduit;
+        $this->categorieProduit = $categorieProduit;
+        $this->prixUnitair = $prixUnitair;
+        $this->quantite = $quantite;
+        $this->idClient = $idClient;
+    }
+
+    /**
      * @return mixed
      */
     public function getIdClient()

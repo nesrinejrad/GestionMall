@@ -1,7 +1,7 @@
 # app/config/security.yml
 security:
     encoders:
-        FOS\UserBundle\Model\UserInterface: bcrypt
+        FOS\UserBundle\Model\UserInterface: plaintext
 
     role_hierarchy:
         ROLE_ClIENT:       ROLE_USER
@@ -38,5 +38,5 @@ security:
         - { path: ^/responsable , role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/demande/new, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/demande/create, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/demande, role: ROLE_ADMIN }
+        #- { path: ^monespace/demande, role: ROLE_ADMIN }
 

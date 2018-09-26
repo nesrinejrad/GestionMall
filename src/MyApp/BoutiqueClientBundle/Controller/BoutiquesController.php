@@ -133,6 +133,7 @@ class BoutiquesController extends Controller {
 
         $em = $this->getDoctrine()->getManager();
 
+
         $boutique = $em->getRepository('MyAppUserBundle:Boutiques')->find($id);
 
         $abonnement = new \MyApp\UserBundle\Entity\abonnement();

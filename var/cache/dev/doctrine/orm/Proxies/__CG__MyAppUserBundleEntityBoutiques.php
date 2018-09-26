@@ -268,6 +268,17 @@ class Boutiques extends \MyApp\UserBundle\Entity\Boutiques implements \Doctrine\
     /**
      * {@inheritDoc}
      */
+    public function getNom()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNom', []);
+
+        return parent::getNom();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function setNomBoutique($nomBoutique)
     {
 

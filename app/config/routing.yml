@@ -1,3 +1,35 @@
+my_app_graphe:
+    resource: "@MyAppGrapheBundle/Resources/config/routing.yml"
+    prefix:   /Graphe
+
+my_app_achats:
+    resource: "@MyAppAchatsBundle/Resources/config/routing.yml"
+    prefix:   /Achat
+
+my_app_livraisons:
+    resource: "@MyAppLivraisonsBundle/Resources/config/routing.yml"
+    prefix:   /Livraison
+
+my_app_my_map:
+    resource: "@MyAppMyMapBundle/Resources/config/routing.yml"
+    prefix:   /
+
+my_app_reclamations:
+    resource: "@MyAppReclamationsBundle/Resources/config/routing.yml"
+    prefix:   /Reclamations
+
+my_app_offres:
+    resource: "@MyAppOffresBundle/Resources/config/routing.yml"
+    prefix:   /Offres
+
+my_app_produits:
+    resource: "@MyAppProduitsBundle/Resources/config/routing.yml"
+    prefix:   /produits
+
+my_app_publicites:
+    resource: "@MyAppPublicitesBundle/Resources/config/routing.yml"
+    prefix:   /publicites
+
 my_app_boutique_client:
     resource: "@MyAppBoutiqueClientBundle/Resources/config/routing.yml"
     prefix:   /

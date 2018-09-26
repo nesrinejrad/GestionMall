@@ -22,16 +22,16 @@ class Offres
     private $id;
 
     /**
-     * @var string
+     * @var \DateTime
      *
-     * @ORM\Column(name="dateDebutOffre", type="string", length=255)
+     * @ORM\Column(name="dateDebutOffre", type="date")
      */
     private $dateDebutOffre;
 
     /**
-     * @var string
+     * @var \DateTime
      *
-     * @ORM\Column(name="dateFinOffre", type="string", length=255)
+     * @ORM\Column(name="dateFinOffre", type="date")
      */
     private $dateFinOffre;
 
@@ -57,11 +57,20 @@ class Offres
     private $valeur;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="blob")
+     */
+    private $image;
+
+    /**
      * @ORM\ManyToOne (targetEntity="Boutiques")
      * @ORM\JoinColumn (name="idBoutique",referencedColumnName="id",onDelete="CASCADE")
      */
 
     private $idBoutique;
+
+
 
     /**
      * @return mixed
@@ -77,6 +86,22 @@ class Offres
     public function setIdBoutique($idBoutique)
     {
         $this->idBoutique = $idBoutique;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param mixed $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
     }
 
 

@@ -103,6 +103,467 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        elseif (0 === strpos($pathinfo, '/Graphe')) {
+            // my_app_graphe_homepage
+            if ('/Graphe' === $trimmedPathinfo) {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'my_app_graphe_homepage');
+                }
+
+                return array (  '_controller' => 'MyApp\\GrapheBundle\\Controller\\DefaultController::indexAction',  '_route' => 'my_app_graphe_homepage',);
+            }
+
+            // _grapheChartLine
+            if ('/Graphe/chartLine' === $pathinfo) {
+                return array (  '_controller' => 'MyApp\\GrapheBundle\\Controller\\GrapheController::chartLineAction',  '_route' => '_grapheChartLine',);
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/Achat')) {
+            // my_app_achats_homepage
+            if ('/Achat' === $trimmedPathinfo) {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'my_app_achats_homepage');
+                }
+
+                return array (  '_controller' => 'MyApp\\AchatsBundle\\Controller\\DefaultController::indexAction',  '_route' => 'my_app_achats_homepage',);
+            }
+
+            if (0 === strpos($pathinfo, '/Achat/a')) {
+                // addAchats
+                if ('/Achat/ajoutAchat' === $pathinfo) {
+                    return array (  '_controller' => 'MyApp\\AchatsBundle\\Controller\\AchatsController::ajoutAction',  '_route' => 'addAchats',);
+                }
+
+                // ajouterAchatP
+                if (0 === strpos($pathinfo, '/Achat/ajouterAchatP') && preg_match('#^/Achat/ajouterAchatP/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'ajouterAchatP')), array (  '_controller' => 'MyApp\\AchatsBundle\\Controller\\AchatsController::ajoutPAction',));
+                }
+
+                // affAchats
+                if ('/Achat/affichageAchat' === $pathinfo) {
+                    return array (  '_controller' => 'MyApp\\AchatsBundle\\Controller\\AchatsController::affichageAction',  '_route' => 'affAchats',);
+                }
+
+            }
+
+            // searchAchats
+            if ('/Achat/rechercheAchat' === $pathinfo) {
+                return array (  '_controller' => 'MyApp\\AchatsBundle\\Controller\\AchatsController::rechercheAction',  '_route' => 'searchAchats',);
+            }
+
+            // updateAchats
+            if (0 === strpos($pathinfo, '/Achat/modifAchat') && preg_match('#^/Achat/modifAchat/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'updateAchats')), array (  '_controller' => 'MyApp\\AchatsBundle\\Controller\\AchatsController::modifierAction',));
+            }
+
+            // suppAchats
+            if (0 === strpos($pathinfo, '/Achat/supprimer') && preg_match('#^/Achat/supprimer/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'suppAchats')), array (  '_controller' => 'MyApp\\AchatsBundle\\Controller\\AchatsController::deleteAction',));
+            }
+
+        }
+
+        // my_app_livraisons_homepage
+        if ('/Livraison' === $trimmedPathinfo) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'my_app_livraisons_homepage');
+            }
+
+            return array (  '_controller' => 'MyApp\\LivraisonsBundle\\Controller\\DefaultController::indexAction',  '_route' => 'my_app_livraisons_homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/Livraison/Livraison')) {
+            // affLivraisons
+            if ('/Livraison/Livraison/affichageLivraison' === $pathinfo) {
+                return array (  '_controller' => 'MyApp\\LivraisonsBundle\\Controller\\LivraisonsController::affichageAction',  '_route' => 'affLivraisons',);
+            }
+
+            // addLivraisons
+            if ('/Livraison/Livraison/ajoutLivraison' === $pathinfo) {
+                return array (  '_controller' => 'MyApp\\LivraisonsBundle\\Controller\\LivraisonsController::ajoutAction',  '_route' => 'addLivraisons',);
+            }
+
+            // updateLivraisons
+            if (0 === strpos($pathinfo, '/Livraison/Livraison/modifierLivraison') && preg_match('#^/Livraison/Livraison/modifierLivraison/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'updateLivraisons')), array (  '_controller' => 'MyApp\\LivraisonsBundle\\Controller\\LivraisonsController::modifierAction',));
+            }
+
+            // suppLivraisons
+            if (0 === strpos($pathinfo, '/Livraison/Livraison/supprimerLivraison') && preg_match('#^/Livraison/Livraison/supprimerLivraison/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'suppLivraisons')), array (  '_controller' => 'MyApp\\LivraisonsBundle\\Controller\\LivraisonsController::deleteAction',));
+            }
+
+            // searchLivraisons
+            if ('/Livraison/Livraison/rechercheLivraison' === $pathinfo) {
+                return array (  '_controller' => 'MyApp\\LivraisonsBundle\\Controller\\LivraisonsController::rechercheAction',  '_route' => 'searchLivraisons',);
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/carte')) {
+            // my_app_my_map_homepage
+            if ('/carte' === $pathinfo) {
+                return array (  '_controller' => 'MyApp\\MyMapBundle\\Controller\\DefaultController::indexAction',  '_route' => 'my_app_my_map_homepage',);
+            }
+
+            // my_app_my_map_client
+            if ('/carteclient' === $pathinfo) {
+                return array (  '_controller' => 'MyApp\\MyMapBundle\\Controller\\DefaultController::carteclientAction',  '_route' => 'my_app_my_map_client',);
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/Offres')) {
+            // my_app_offres_homepage
+            if ('/Offres' === $trimmedPathinfo) {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'my_app_offres_homepage');
+                }
+
+                return array (  '_controller' => 'MyApp\\OffresBundle\\Controller\\DefaultController::indexAction',  '_route' => 'my_app_offres_homepage',);
+            }
+
+            // ajouterOF
+            if ('/Offres/ajouterOF' === $pathinfo) {
+                return array (  '_controller' => 'MyApp\\OffresBundle\\Controller\\OffresController::ajouterOFAction',  '_route' => 'ajouterOF',);
+            }
+
+            if (0 === strpos($pathinfo, '/Offres/afficherO')) {
+                // afficherO
+                if ('/Offres/afficherO' === $pathinfo) {
+                    return array (  '_controller' => 'MyApp\\OffresBundle\\Controller\\OffresController::afficherOAction',  '_route' => 'afficherO',);
+                }
+
+                // afficherOC
+                if ('/Offres/afficherOC' === $pathinfo) {
+                    return array (  '_controller' => 'MyApp\\OffresBundle\\Controller\\OffresController::afficherOCAction',  '_route' => 'afficherOC',);
+                }
+
+            }
+
+            // suppO
+            if (0 === strpos($pathinfo, '/Offres/suppO') && preg_match('#^/Offres/suppO/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'suppO')), array (  '_controller' => 'MyApp\\OffresBundle\\Controller\\OffresController::suppOAction',));
+            }
+
+            // modifierO
+            if (0 === strpos($pathinfo, '/Offres/modifierO') && preg_match('#^/Offres/modifierO/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifierO')), array (  '_controller' => 'MyApp\\OffresBundle\\Controller\\OffresController::modifierOAction',));
+            }
+
+            // my_app_reclamations_homepage
+            if ('/Offres' === $trimmedPathinfo) {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'my_app_reclamations_homepage');
+                }
+
+                return array (  '_controller' => 'MyApp\\ReclamationsBundle\\Controller\\DefaultController::indexAction',  '_route' => 'my_app_reclamations_homepage',);
+            }
+
+            // ajouterRec
+            if ('/Offres/ajouterRec' === $pathinfo) {
+                return array (  '_controller' => 'MyApp\\ReclamationsBundle\\Controller\\ReclamationsController::ajouterRecAction',  '_route' => 'ajouterRec',);
+            }
+
+            if (0 === strpos($pathinfo, '/Offres/afficherRec')) {
+                // afficherRec
+                if ('/Offres/afficherRec' === $pathinfo) {
+                    return array (  '_controller' => 'MyApp\\ReclamationsBundle\\Controller\\ReclamationsController::afficherRecAction',  '_route' => 'afficherRec',);
+                }
+
+                // afficherRec1
+                if (0 === strpos($pathinfo, '/Offres/afficherRec1') && preg_match('#^/Offres/afficherRec1/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'afficherRec1')), array (  '_controller' => 'MyApp\\ReclamationsBundle\\Controller\\ReclamationsController::afficherRec1Action',));
+                }
+
+                // afficherRecN
+                if ('/Offres/afficherRecN' === $pathinfo) {
+                    return array (  '_controller' => 'MyApp\\ReclamationsBundle\\Controller\\ReclamationsController::afficherRecNAction',  '_route' => 'afficherRecN',);
+                }
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/Offres/suppRec')) {
+                // suppRec
+                if (preg_match('#^/Offres/suppRec/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'suppRec')), array (  '_controller' => 'MyApp\\ReclamationsBundle\\Controller\\ReclamationsController::suppRecAction',));
+                }
+
+                // suppRecT
+                if ('/Offres/suppRecT' === $pathinfo) {
+                    return array (  '_controller' => 'MyApp\\ReclamationsBundle\\Controller\\ReclamationsController::suppRecTAction',  '_route' => 'suppRecT',);
+                }
+
+                // suppRecV
+                if ('/Offres/suppRecV' === $pathinfo) {
+                    return array (  '_controller' => 'MyApp\\ReclamationsBundle\\Controller\\ReclamationsController::suppRecVAction',  '_route' => 'suppRecV',);
+                }
+
+            }
+
+            // AffichagePO
+            if (0 === strpos($pathinfo, '/Offres/AffichagePO') && preg_match('#^/Offres/AffichagePO/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'AffichagePO')), array (  '_controller' => 'MyApp\\OffresBundle\\Controller\\OffresController::afficherPOAction',));
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/p')) {
+            if (0 === strpos($pathinfo, '/produits')) {
+                // my_app_produits_homepage
+                if ('/produits' === $trimmedPathinfo) {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'my_app_produits_homepage');
+                    }
+
+                    return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\DefaultController::indexAction',  '_route' => 'my_app_produits_homepage',);
+                }
+
+                if (0 === strpos($pathinfo, '/produits/afficher')) {
+                    // afficherChaussure
+                    if ('/produits/afficher' === $pathinfo) {
+                        return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ChaussuresController::afficherAction',  '_route' => 'afficherChaussure',);
+                    }
+
+                    // afficherChaussureHomme
+                    if ('/produits/afficherH' === $pathinfo) {
+                        return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ChaussuresController::afficherHommeAction',  '_route' => 'afficherChaussureHomme',);
+                    }
+
+                    // afficherChaussureFemme
+                    if ('/produits/afficherF' === $pathinfo) {
+                        return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ChaussuresController::afficherFemmeAction',  '_route' => 'afficherChaussureFemme',);
+                    }
+
+                    if (0 === strpos($pathinfo, '/produits/afficherV')) {
+                        // afficherVetementHomme
+                        if ('/produits/afficherVH' === $pathinfo) {
+                            return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\VetementsController::afficherHommeAction',  '_route' => 'afficherVetementHomme',);
+                        }
+
+                        // afficherVetementFemme
+                        if ('/produits/afficherVF' === $pathinfo) {
+                            return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\VetementsController::afficherFemmeAction',  '_route' => 'afficherVetementFemme',);
+                        }
+
+                        // afficherVetement
+                        if ('/produits/afficherV' === $pathinfo) {
+                            return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\VetementsController::afficherAction',  '_route' => 'afficherVetement',);
+                        }
+
+                    }
+
+                    elseif (0 === strpos($pathinfo, '/produits/afficherA')) {
+                        // afficherAccessoire
+                        if ('/produits/afficherA' === $pathinfo) {
+                            return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\AccessoiresController::afficherAction',  '_route' => 'afficherAccessoire',);
+                        }
+
+                        // afficherAccessoireFemme
+                        if ('/produits/afficherAF' === $pathinfo) {
+                            return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\AccessoiresController::afficherFemmeAction',  '_route' => 'afficherAccessoireFemme',);
+                        }
+
+                        // afficherAccessoireHomme
+                        if ('/produits/afficherAH' === $pathinfo) {
+                            return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\AccessoiresController::afficherHommeAction',  '_route' => 'afficherAccessoireHomme',);
+                        }
+
+                    }
+
+                    elseif (0 === strpos($pathinfo, '/produits/afficherP')) {
+                        // afficherProduit
+                        if ('/produits/afficherP' === $pathinfo) {
+                            return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ProduitsController::affichageAction',  '_route' => 'afficherProduit',);
+                        }
+
+                        // afficherProduitHomme
+                        if ('/produits/afficherPH' === $pathinfo) {
+                            return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ProduitsController::afficherHommeAction',  '_route' => 'afficherProduitHomme',);
+                        }
+
+                        // afficherProduitFemme
+                        if ('/produits/afficherPF' === $pathinfo) {
+                            return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ProduitsController::afficherFemmeAction',  '_route' => 'afficherProduitFemme',);
+                        }
+
+                    }
+
+                    // afficherBoutiques
+                    if ('/produits/afficherB' === $pathinfo) {
+                        return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\DefaultController::indexAction',  '_route' => 'afficherBoutiques',);
+                    }
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/produits/ajout')) {
+                    // ajoutProduit
+                    if ('/produits/ajoutP' === $pathinfo) {
+                        return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ProduitsController::ajoutProduitsAction',  '_route' => 'ajoutProduit',);
+                    }
+
+                    // ajoutVetement
+                    if ('/produits/ajoutV' === $pathinfo) {
+                        return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\VetementsController::ajoutFormAction',  '_route' => 'ajoutVetement',);
+                    }
+
+                    // ajoutAccessoire
+                    if ('/produits/ajoutA' === $pathinfo) {
+                        return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\AccessoiresController::ajoutFormAction',  '_route' => 'ajoutAccessoire',);
+                    }
+
+                    // ajoutChaussure
+                    if ('/produits/ajoutC' === $pathinfo) {
+                        return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ChaussuresController::ajoutFormAction',  '_route' => 'ajoutChaussure',);
+                    }
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/produits/modifier')) {
+                    // modifierVet
+                    if (0 === strpos($pathinfo, '/produits/modifierV') && preg_match('#^/produits/modifierV/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifierVet')), array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\VetementsController::modifierAction',));
+                    }
+
+                    // modifierProd
+                    if (preg_match('#^/produits/modifier/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifierProd')), array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ProduitsController::modifierAction',));
+                    }
+
+                    // modifierAccess
+                    if (0 === strpos($pathinfo, '/produits/modifierA') && preg_match('#^/produits/modifierA/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifierAccess')), array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\AccessoiresController::modifierAction',));
+                    }
+
+                    // modifierChaussure
+                    if (0 === strpos($pathinfo, '/produits/modifierC') && preg_match('#^/produits/modifierC/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifierChaussure')), array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ChaussuresController::modifierAction',));
+                    }
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/produits/supprimer')) {
+                    // supprimerVet
+                    if (0 === strpos($pathinfo, '/produits/supprimerV') && preg_match('#^/produits/supprimerV/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'supprimerVet')), array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\VetementsController::supprimerAction',));
+                    }
+
+                    // supprimerProd
+                    if (preg_match('#^/produits/supprimer/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'supprimerProd')), array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ProduitsController::supprimerAction',));
+                    }
+
+                    if (0 === strpos($pathinfo, '/produits/supprimerA')) {
+                        // supprimerAccess
+                        if (preg_match('#^/produits/supprimerA/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                            return $this->mergeDefaults(array_replace($matches, array('_route' => 'supprimerAccess')), array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\AccessoiresController::supprimerAction',));
+                        }
+
+                        // supprimerChaussures
+                        if (0 === strpos($pathinfo, '/produits/supprimerA=C') && preg_match('#^/produits/supprimerA\\=C/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                            return $this->mergeDefaults(array_replace($matches, array('_route' => 'supprimerChaussures')), array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ChaussuresController::supprimerAction',));
+                        }
+
+                    }
+
+                }
+
+                elseif (0 === strpos($pathinfo, '/produits/AffichAC')) {
+                    // AffichageProduitClient
+                    if ('/produits/AffichAC' === $pathinfo) {
+                        return array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\AccessoiresController::indexACAction',  '_route' => 'AffichageProduitClient',);
+                    }
+
+                    // AffichageProduitClientB
+                    if (0 === strpos($pathinfo, '/produits/AffichACB') && preg_match('#^/produits/AffichACB/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'AffichageProduitClientB')), array (  '_controller' => 'MyApp\\ProduitsBundle\\Controller\\ProduitsController::afficherBAction',));
+                    }
+
+                }
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/profile')) {
+                // fos_user_profile_show
+                if ('/profile' === $trimmedPathinfo) {
+                    if ('GET' !== $canonicalMethod) {
+                        $allow[] = 'GET';
+                        goto not_fos_user_profile_show;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'fos_user_profile_show');
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::showAction',  '_route' => 'fos_user_profile_show',);
+                }
+                not_fos_user_profile_show:
+
+                // fos_user_profile_edit
+                if ('/profile/edit' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_fos_user_profile_edit;
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::editAction',  '_route' => 'fos_user_profile_edit',);
+                }
+                not_fos_user_profile_edit:
+
+                // fos_user_change_password
+                if ('/profile/change-password' === $pathinfo) {
+                    if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                        $allow = array_merge($allow, array('GET', 'POST'));
+                        goto not_fos_user_change_password;
+                    }
+
+                    return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ChangePasswordController::changePasswordAction',  '_route' => 'fos_user_change_password',);
+                }
+                not_fos_user_change_password:
+
+            }
+
+            elseif (0 === strpos($pathinfo, '/publicites')) {
+                // my_app_publicites_homepage
+                if ('/publicites' === $trimmedPathinfo) {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'my_app_publicites_homepage');
+                    }
+
+                    return array (  '_controller' => 'MyApp\\PublicitesBundle\\Controller\\DefaultController::indexAction',  '_route' => 'my_app_publicites_homepage',);
+                }
+
+                // Ajoutpub
+                if ('/publicites/AjoutPub' === $pathinfo) {
+                    return array (  '_controller' => 'MyApp\\PublicitesBundle\\Controller\\PublicitesController::ajoutFormAction',  '_route' => 'Ajoutpub',);
+                }
+
+                // affichagePub
+                if ('/publicites/affichage' === $pathinfo) {
+                    return array (  '_controller' => 'MyApp\\PublicitesBundle\\Controller\\PublicitesController::affichageAction',  '_route' => 'affichagePub',);
+                }
+
+                // afficherPubCa
+                if ('/publicites/afficherPubC' === $pathinfo) {
+                    return array (  '_controller' => 'MyApp\\PublicitesBundle\\Controller\\PublicitesController::affichageCAction',  '_route' => 'afficherPubCa',);
+                }
+
+                // modifierPub
+                if (0 === strpos($pathinfo, '/publicites/modifier') && preg_match('#^/publicites/modifier/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'modifierPub')), array (  '_controller' => 'MyApp\\PublicitesBundle\\Controller\\PublicitesController::modifierAction',));
+                }
+
+                // supprimerPub
+                if (0 === strpos($pathinfo, '/publicites/supprimer') && preg_match('#^/publicites/supprimer/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'supprimerPub')), array (  '_controller' => 'MyApp\\PublicitesBundle\\Controller\\PublicitesController::supprimerAction',));
+                }
+
+            }
+
+        }
+
         elseif (0 === strpos($pathinfo, '/boutiques')) {
             // boutiques_client_index
             if ('/boutiques' === $trimmedPathinfo) {
@@ -211,6 +672,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     // responsable
                     if ('/monespace/acceuil' === $pathinfo) {
                         return array (  '_controller' => 'MyApp\\UserBundle\\Controller\\SecurityController::loginAction',  '_route' => 'responsable',);
+                    }
+
+                    // homePageC
+                    if ('/monespace/acceuil' === $pathinfo) {
+                        return array (  '_controller' => 'MyApp\\UserBundle\\Controller\\DefaultController::homePageCAction',  '_route' => 'homePageC',);
                     }
 
                 }
@@ -856,47 +1322,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_fos_user_security_logout:
 
-        if (0 === strpos($pathinfo, '/profile')) {
-            // fos_user_profile_show
-            if ('/profile' === $trimmedPathinfo) {
-                if ('GET' !== $canonicalMethod) {
-                    $allow[] = 'GET';
-                    goto not_fos_user_profile_show;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'fos_user_profile_show');
-                }
-
-                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::showAction',  '_route' => 'fos_user_profile_show',);
-            }
-            not_fos_user_profile_show:
-
-            // fos_user_profile_edit
-            if ('/profile/edit' === $pathinfo) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_fos_user_profile_edit;
-                }
-
-                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::editAction',  '_route' => 'fos_user_profile_edit',);
-            }
-            not_fos_user_profile_edit:
-
-            // fos_user_change_password
-            if ('/profile/change-password' === $pathinfo) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_fos_user_change_password;
-                }
-
-                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ChangePasswordController::changePasswordAction',  '_route' => 'fos_user_change_password',);
-            }
-            not_fos_user_change_password:
-
-        }
-
-        elseif (0 === strpos($pathinfo, '/register')) {
+        if (0 === strpos($pathinfo, '/register')) {
             // fos_user_registration_register
             if ('/register' === $trimmedPathinfo) {
                 if (!in_array($canonicalMethod, array('GET', 'POST'))) {

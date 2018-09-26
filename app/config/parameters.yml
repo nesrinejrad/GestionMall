@@ -4,7 +4,7 @@ parameters:
     database_port: null
     database_name: tunisiamall1.1
     database_user: root
-    database_password: null
+    database_password: nesrina0510
     mailer_transport: gmail
     mailer_host: smtp.gmail.com
     mailer_user: esprit.tunisiamal@gmail.com
